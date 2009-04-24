@@ -30,6 +30,7 @@ namespace GameStateManagement
 
         static string[] enemies = { "Slow", "Medium", "Fast" };
         public static int currentDifficulty = 0;
+		public static int numEnemies = 0; 
 
         #endregion
 
@@ -63,6 +64,11 @@ namespace GameStateManagement
         {
             return currentBullets;
         }
+
+		public static int getEnemies()
+		{
+			return numEnemies;
+		}
 
         /// <summary>
         /// Fills in the latest values for the options screen menu text.
