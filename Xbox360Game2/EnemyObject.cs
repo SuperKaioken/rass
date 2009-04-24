@@ -20,20 +20,37 @@ namespace GameStateManagement
     {
         public Vector2 velocity;
         public Vector2 position;
-        public Texture2D sprite;
+        public Texture2D[] sprite;
+        public int spritePosition;
         public Rectangle destRect;
         public bool alive;
         public Rectangle rect;
         Rectangle viewportRect;
+        public int numEnemies;
+        public Random random;
+        public int timePassed = 0; 
 
-        public EnemyObject(Texture2D loadedTexture)
+        public EnemyObject(Texture2D[] loadedTexture)
         {
-            position = Vector2.Zero;
+            spritePosition = 0;
+            position = new Vector2(300, 100);
             sprite = loadedTexture;
             velocity = Vector2.Zero;
             alive = false;
-            rect = new Rectangle((int)ScreenManager.GraphicsDevice.Viewport.Width / 2, (int)ScreenManager.GraphicsDevice.Viewport.Height - 150, sprite.Width, sprite.Height);
-            viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
+            //rect = new Rectangle((int)ScreenManager.GraphicsDevice.Viewport.Width / 2, (int)ScreenManager.GraphicsDevice.Viewport.Height - 150, sprite[spritePosition].Width, sprite[spritePosition].Height);
+            //viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
+            numEnemies = OptionsMenuScreen.getEnemies();
+            random = new Random();
+            
+
+            //velocity.X = 100;
+            if (numEnemies == 0)
+                velocity.X = 1;
+            else if (numEnemies == 1)
+                velocity.X = 2;
+            else if (numEnemies == 2)
+                velocity.X = 3; 
+
         }
 
         public void Update()
@@ -43,11 +60,23 @@ namespace GameStateManagement
                 position += velocity;
             }
             checkCollision();
+            timePassed++;
+            if (timePassed > 25)
+            {
+                spritePosition++;
+                if (spritePosition > sprite.Length - 1)
+                {
+                    spritePosition = 0;
+                }
+                timePassed = 0; 
+            }
+            //if it's the axe enemy, do this (need some way to check what enemy it is)
+            this.setAxeMovement();
         }
 
         public void checkCollision()
         {
-            foreach (BallObject ball in dudeBalls)
+           /* foreach (BallObject ball in dudeBalls)
             {
                 if (ball.alive)
                 {
@@ -57,7 +86,19 @@ namespace GameStateManagement
                         ball.alive = false;
                     }
                 }
-            }
+            }*/
+        }
+
+        public void setAxeMovement()
+        {
+            position.X += velocity.X;
+            position.Y += (float)random.NextDouble() * 2.0f;
+            position.Y -= (float)random.NextDouble() * 2.0f;
+        }
+
+        public void draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+                spriteBatch.Draw(sprite[spritePosition], position, Color.White);
         }
     }
 }

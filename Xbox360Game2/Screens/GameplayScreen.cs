@@ -152,6 +152,8 @@ namespace GameStateManagement
         Song lastLevelSong;
         SoundEffect gunShot;
         SoundEffect explosion;
+		EnemyObject enemy; //testing [JD] new shit
+        Texture2D[] enemySprite; //new shit
         #endregion
 
         #region Initialization
@@ -265,6 +267,64 @@ namespace GameStateManagement
                 //Thread.Sleep(13000);
                 //MediaPlayer.Play(lastLevelSong);
             //}
+
+			//make the axe enemy
+            enemySprite = new Texture2D[4];
+            for (int i = 0; i < 4; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\axe" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);
+            //make the ball enemy
+            /*enemySprite = new Texture2D[4];
+            for (int i = 0; i < 4; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\ball" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+            //make the blue eye enemy
+           /* enemySprite = new Texture2D[3];
+            for (int i = 0; i < 3; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\blueeye" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+            //make the goldeye enemy
+           /* enemySprite = new Texture2D[3];
+            for (int i = 0; i < 3; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\goldeye" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+            //make the lance enemy
+            /*enemySprite = new Texture2D[9];
+            for (int i = 0; i < 9; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\lance" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+            //make the pulse enemy
+           /* enemySprite = new Texture2D[4];
+            for (int i = 0; i < 4; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\pulse" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+            //make the slime enemy
+            /*enemySprite = new Texture2D[5];
+            for (int i = 0; i < 5; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\slime" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
+
+            //make the thing enemy
+            /*enemySprite = new Texture2D[6];
+            for (int i = 0; i < 6; i++)
+            {
+                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\thing" + i.ToString());
+            }
+            enemy = new EnemyObject(enemySprite);*/
         }
 
 
@@ -682,6 +742,8 @@ namespace GameStateManagement
 #endif
             }
 
+			enemy.Update();//new shit
+
             //foreach (EnemyObject enemy in enemies)
             //    enemy.Update();
 
@@ -941,6 +1003,10 @@ namespace GameStateManagement
             //spriteBatch.DrawString(gameFont, "Insert Gameplay Here",
             //                       enemyPosition, Color.DarkRed);
             spriteBatch.Draw(backgroundTexture, viewportRect, Color.White);
+
+			// NEW SHIT
+            enemy.draw(gameTime, spriteBatch);
+
 
             if (dude.dir == Dirs.RUNLEFT || dude.dir == Dirs.UPLEFT || dude.dir == Dirs.RUNSHOOTLEFT || dude.dir == Dirs.STANDLEFT)            
                 spriteBatch.Draw(dude.sprite, dude.destRect, null, Color.White, 0.0f, Vector2.Zero, SpriteEffects.FlipHorizontally, 0.0f);               
