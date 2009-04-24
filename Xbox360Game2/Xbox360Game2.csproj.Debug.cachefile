@@ -13,7 +13,6 @@ Content\gradient.xnb
 Content\Fonts\gamefont.xnb
 Content\Fonts\menufont.xnb
 Content\Fonts\outline.xnb
-Content\Sounds\Europe - The Final Countdown.xnb
 Content\Sounds\through_the.xnb
 Content\Sounds\explosion-02.xnb
 Content\Sounds\Gun_Silencer.xnb
@@ -51,6 +50,7 @@ Content\Sprites\Contra\Upright\contra-upright5.xnb
 Content\Sprites\Contra\Upright\contra-upright6.xnb
 Content\Sprites\Weapons\FireBallRightF1.xnb
 Content\Sprites\Weapons\FireBallRightF2.xnb
-Content\Sounds\Europe - The Final Countdown.wma
+Content\Sounds\The Final Countdown.xnb
 Content\Sounds\through_the.wma
 Content\Sounds\Some Cut.wma
+Content\Sounds\The Final Countdown.wma

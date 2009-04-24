@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back1.xnb</Output>
-      <Time>2009-04-23T22:05:20.0045806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2375806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\back2.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back2.xnb</Output>
-      <Time>2009-04-23T22:05:20.0085806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2405806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\back3.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back3.xnb</Output>
-      <Time>2009-04-23T22:05:20.0115806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2435806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\back4.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back4.xnb</Output>
-      <Time>2009-04-23T22:05:20.0145806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2465806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\back5.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back5.xnb</Output>
-      <Time>2009-04-23T22:05:20.0185806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2505806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\background.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\background.xnb</Output>
-      <Time>2009-04-23T22:05:19.9935806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2275806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\bossLevel.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\bossLevel.xnb</Output>
-      <Time>2009-04-23T22:05:19.9905806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2235806-05:00</Time>
     </Item>
     <Item>
       <Source>Backgrounds\titleShotBack.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\titleShotBack.xnb</Output>
-      <Time>2009-04-23T22:05:19.9985806-05:00</Time>
+      <Time>2009-04-23T22:50:05.2325806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Health Bar\HealthBar.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Health Bar\HealthBar.xnb</Output>
-      <Time>2009-04-23T22:05:24.0895806-05:00</Time>
+      <Time>2009-04-23T22:50:08.3625806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Weapons\cannonball.tga</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\cannonball.xnb</Output>
-      <Time>2009-04-23T22:05:24.6065806-05:00</Time>
+      <Time>2009-04-23T22:50:08.4155806-05:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\blank.xnb</Output>
-      <Time>2009-04-23T22:05:30.2985806-05:00</Time>
+      <Time>2009-04-23T22:50:14.1785806-05:00</Time>
     </Item>
     <Item>
       <Source>gradient.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\gradient.xnb</Output>
-      <Time>2009-04-23T22:05:30.2855806-05:00</Time>
+      <Time>2009-04-23T22:50:14.1605806-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\gamefont.spritefont</Source>
@@ -116,7 +116,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\gamefont.xnb</Output>
-      <Time>2009-04-23T22:05:20.5265806-05:00</Time>
+      <Time>2009-04-23T22:50:05.4785806-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\menufont.spritefont</Source>
@@ -125,7 +125,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\menufont.xnb</Output>
-      <Time>2009-04-23T22:05:20.5195806-05:00</Time>
+      <Time>2009-04-23T22:50:05.4425806-05:00</Time>
     </Item>
     <Item>
       <Source>Fonts\outline.spritefont</Source>
@@ -134,17 +134,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\outline.xnb</Output>
-      <Time>2009-04-23T22:05:20.5235806-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sounds\Europe - The Final Countdown.mp3</Source>
-      <Name>Sounds\Europe - The Final Countdown</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.xnb</Output>
-      <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.wma</Extra>
-      <Time>2009-04-23T22:05:30.1615806-05:00</Time>
+      <Time>2009-04-23T22:50:05.4455806-05:00</Time>
     </Item>
     <Item>
       <Source>Sounds\through_the.mp3</Source>
@@ -154,7 +144,7 @@
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.xnb</Output>
       <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.wma</Extra>
-      <Time>2009-04-23T22:05:30.2535806-05:00</Time>
+      <Time>2009-04-23T22:50:13.2745806-05:00</Time>
     </Item>
     <Item>
       <Source>Sounds\explosion-02.wav</Source>
@@ -163,7 +153,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\explosion-02.xnb</Output>
-      <Time>2009-04-23T22:05:30.1695806-05:00</Time>
+      <Time>2009-04-23T22:50:13.2315806-05:00</Time>
     </Item>
     <Item>
       <Source>Sounds\Gun_Silencer.wav</Source>
@@ -172,7 +162,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Gun_Silencer.xnb</Output>
-      <Time>2009-04-23T22:05:30.1665806-05:00</Time>
+      <Time>2009-04-23T22:50:13.2255806-05:00</Time>
     </Item>
     <Item>
       <Source>Sounds\Some Cut.mp3</Source>
@@ -182,7 +172,7 @@
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.xnb</Output>
       <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.wma</Extra>
-      <Time>2009-04-23T22:05:30.2275806-05:00</Time>
+      <Time>2009-04-23T22:50:13.2465806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Stand\contra-stand0.png</Source>
@@ -191,7 +181,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand0.xnb</Output>
-      <Time>2009-04-23T22:05:22.7835806-05:00</Time>
+      <Time>2009-04-23T22:50:07.9905806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Stand\contra-stand1.png</Source>
@@ -200,7 +190,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand1.xnb</Output>
-      <Time>2009-04-23T22:05:22.7905806-05:00</Time>
+      <Time>2009-04-23T22:50:07.9935806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Stand\contra-stand2.png</Source>
@@ -209,7 +199,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand2.xnb</Output>
-      <Time>2009-04-23T22:05:22.7975806-05:00</Time>
+      <Time>2009-04-23T22:50:07.9975806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Stand\contra-stand3.png</Source>
@@ -218,7 +208,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand3.xnb</Output>
-      <Time>2009-04-23T22:05:22.8355806-05:00</Time>
+      <Time>2009-04-23T22:50:08.0015806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right0.png</Source>
@@ -227,7 +217,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right0.xnb</Output>
-      <Time>2009-04-23T22:05:21.9145806-05:00</Time>
+      <Time>2009-04-23T22:50:07.6995806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right1.png</Source>
@@ -236,7 +226,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right1.xnb</Output>
-      <Time>2009-04-23T22:05:21.9175806-05:00</Time>
+      <Time>2009-04-23T22:50:07.7075806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right2.png</Source>
@@ -245,7 +235,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right2.xnb</Output>
-      <Time>2009-04-23T22:05:21.9205806-05:00</Time>
+      <Time>2009-04-23T22:50:07.7125806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right3.png</Source>
@@ -254,7 +244,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right3.xnb</Output>
-      <Time>2009-04-23T22:05:22.1185806-05:00</Time>
+      <Time>2009-04-23T22:50:07.7175806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right4.png</Source>
@@ -263,7 +253,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right4.xnb</Output>
-      <Time>2009-04-23T22:05:22.1225806-05:00</Time>
+      <Time>2009-04-23T22:50:07.7235806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Run\contra-right5.png</Source>
@@ -272,7 +262,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right5.xnb</Output>
-      <Time>2009-04-23T22:05:22.1265806-05:00</Time>
+      <Time>2009-04-23T22:50:07.7275806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\RunShoot\contra-run-shoot0.png</Source>
@@ -281,7 +271,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot0.xnb</Output>
-      <Time>2009-04-23T22:05:20.6505806-05:00</Time>
+      <Time>2009-04-23T22:50:07.2705806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\RunShoot\contra-run-shoot1.png</Source>
@@ -290,7 +280,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot1.xnb</Output>
-      <Time>2009-04-23T22:05:20.6545806-05:00</Time>
+      <Time>2009-04-23T22:50:07.2735806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\RunShoot\contra-run-shoot2.png</Source>
@@ -299,7 +289,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot2.xnb</Output>
-      <Time>2009-04-23T22:05:20.6575806-05:00</Time>
+      <Time>2009-04-23T22:50:07.3175806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\RunShoot\contra-run-shoot3.png</Source>
@@ -308,7 +298,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot3.xnb</Output>
-      <Time>2009-04-23T22:05:20.6985806-05:00</Time>
+      <Time>2009-04-23T22:50:07.3355806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Up\contra-up0.png</Source>
@@ -317,7 +307,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up0.xnb</Output>
-      <Time>2009-04-23T22:05:22.2615806-05:00</Time>
+      <Time>2009-04-23T22:50:07.8135806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Up\contra-up1.png</Source>
@@ -326,7 +316,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up1.xnb</Output>
-      <Time>2009-04-23T22:05:22.2655806-05:00</Time>
+      <Time>2009-04-23T22:50:07.8175806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump0.png</Source>
@@ -335,7 +325,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump0.xnb</Output>
-      <Time>2009-04-23T22:05:23.4705806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1345806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump1.png</Source>
@@ -344,7 +334,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump1.xnb</Output>
-      <Time>2009-04-23T22:05:23.4735806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1375806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump2.png</Source>
@@ -353,7 +343,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump2.xnb</Output>
-      <Time>2009-04-23T22:05:23.4775806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1425806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump3.png</Source>
@@ -362,7 +352,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump3.xnb</Output>
-      <Time>2009-04-23T22:05:23.5625806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1465806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump4.png</Source>
@@ -371,7 +361,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump4.xnb</Output>
-      <Time>2009-04-23T22:05:23.5655806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1575806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump5.png</Source>
@@ -380,7 +370,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump5.xnb</Output>
-      <Time>2009-04-23T22:05:23.5695806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1615806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump6.png</Source>
@@ -389,7 +379,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump6.xnb</Output>
-      <Time>2009-04-23T22:05:23.5735806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1645806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Jump\contra-jump7.png</Source>
@@ -398,7 +388,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump7.xnb</Output>
-      <Time>2009-04-23T22:05:23.5765806-05:00</Time>
+      <Time>2009-04-23T22:50:08.1675806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright0.png</Source>
@@ -407,7 +397,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright0.xnb</Output>
-      <Time>2009-04-23T22:05:21.5985806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5295806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright1.png</Source>
@@ -416,7 +406,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright1.xnb</Output>
-      <Time>2009-04-23T22:05:21.6015806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5505806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright2.png</Source>
@@ -425,7 +415,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright2.xnb</Output>
-      <Time>2009-04-23T22:05:21.6685806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5725806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright3.png</Source>
@@ -434,7 +424,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright3.xnb</Output>
-      <Time>2009-04-23T22:05:21.6725806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5765806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright4.png</Source>
@@ -443,7 +433,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright4.xnb</Output>
-      <Time>2009-04-23T22:05:21.6755806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5815806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright5.png</Source>
@@ -452,7 +442,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright5.xnb</Output>
-      <Time>2009-04-23T22:05:21.6785806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5855806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Contra\Upright\contra-upright6.png</Source>
@@ -461,7 +451,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright6.xnb</Output>
-      <Time>2009-04-23T22:05:21.5955806-05:00</Time>
+      <Time>2009-04-23T22:50:07.5255806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Weapons\FireBallRightF1.png</Source>
@@ -470,7 +460,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF1.xnb</Output>
-      <Time>2009-04-23T22:05:24.6135806-05:00</Time>
+      <Time>2009-04-23T22:50:08.4185806-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Weapons\FireBallRightF2.png</Source>
@@ -479,7 +469,17 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF2.xnb</Output>
-      <Time>2009-04-23T22:05:24.6205806-05:00</Time>
+      <Time>2009-04-23T22:50:08.4225806-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\The Final Countdown.mp3</Source>
+      <Name>Sounds\The Final Countdown</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\The Final Countdown.xnb</Output>
+      <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\The Final Countdown.wma</Extra>
+      <Time>2009-04-23T22:51:34.4965806-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -15,11 +15,9 @@ C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bi
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\gamefont.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\menufont.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\outline.xnb
-C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\explosion-02.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Gun_Silencer.xnb
-C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.wma
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.wma
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Xbox360Game2.exe
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Xbox360Game2.pdb
@@ -60,3 +58,5 @@ C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bi
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright6.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF1.xnb
 C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF2.xnb
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\The Final Countdown.xnb
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\The Final Countdown.wma

@@ -13,8 +13,6 @@ Content\gradient.xnb
 Content\Fonts\gamefont.xnb
 Content\Fonts\menufont.xnb
 Content\Fonts\outline.xnb
-Content\Sounds\Europe - The Final Countdown.xnb
-Content\Sounds\Europe - The Final Countdown.wma
 Content\Sounds\through_the.xnb
 Content\Sounds\through_the.wma
 Content\Sounds\explosion-02.xnb
@@ -54,3 +52,5 @@ Content\Sprites\Contra\Upright\contra-upright5.xnb
 Content\Sprites\Contra\Upright\contra-upright6.xnb
 Content\Sprites\Weapons\FireBallRightF1.xnb
 Content\Sprites\Weapons\FireBallRightF2.xnb
+Content\Sounds\The Final Countdown.xnb
+Content\Sounds\The Final Countdown.wma

@@ -194,7 +194,7 @@ namespace GameStateManagement
             spriteBatch = new SpriteBatch(ScreenManager.GraphicsDevice);
 
             eEgg = Content.Load<Song>("Sounds\\Some Cut");
-            lastLevelIntro = Content.Load<Song>("Sounds\\Europe - The Final Countdown");
+            lastLevelIntro = Content.Load<Song>("Sounds\\The Final Countdown");
             lastLevelSong = Content.Load<Song>("Sounds\\through_the");
             gunShot = Content.Load<SoundEffect>("Sounds\\Gun_Silencer");
             explosion = Content.Load<SoundEffect>("Sounds\\explosion-02");
