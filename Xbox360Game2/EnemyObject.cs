@@ -76,7 +76,7 @@ namespace GameStateManagement
 
         public void checkCollision()
         {
-           /* foreach (BallObject ball in dudeBalls)
+            foreach (BallObject ball in dudeBalls)
             {
                 if (ball.alive)
                 {
@@ -86,7 +86,7 @@ namespace GameStateManagement
                         ball.alive = false;
                     }
                 }
-            }*/
+            }
         }
 
         public void setAxeMovement()
