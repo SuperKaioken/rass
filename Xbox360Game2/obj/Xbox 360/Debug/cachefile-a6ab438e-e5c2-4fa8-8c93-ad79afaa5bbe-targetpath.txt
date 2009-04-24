@@ -1,0 +1,56 @@
+Content\Backgrounds\back1.xnb
+Content\Backgrounds\back2.xnb
+Content\Backgrounds\back3.xnb
+Content\Backgrounds\back4.xnb
+Content\Backgrounds\back5.xnb
+Content\Backgrounds\background.xnb
+Content\Backgrounds\bossLevel.xnb
+Content\Backgrounds\titleShotBack.xnb
+Content\Sprites\Health Bar\HealthBar.xnb
+Content\Sprites\Weapons\cannonball.xnb
+Content\blank.xnb
+Content\gradient.xnb
+Content\Fonts\gamefont.xnb
+Content\Fonts\menufont.xnb
+Content\Fonts\outline.xnb
+Content\Sounds\Europe - The Final Countdown.xnb
+Content\Sounds\Europe - The Final Countdown.wma
+Content\Sounds\through_the.xnb
+Content\Sounds\through_the.wma
+Content\Sounds\explosion-02.xnb
+Content\Sounds\Gun_Silencer.xnb
+Content\Sounds\Some Cut.xnb
+Content\Sounds\Some Cut.wma
+Content\Sprites\Contra\Stand\contra-stand0.xnb
+Content\Sprites\Contra\Stand\contra-stand1.xnb
+Content\Sprites\Contra\Stand\contra-stand2.xnb
+Content\Sprites\Contra\Stand\contra-stand3.xnb
+Content\Sprites\Contra\Run\contra-right0.xnb
+Content\Sprites\Contra\Run\contra-right1.xnb
+Content\Sprites\Contra\Run\contra-right2.xnb
+Content\Sprites\Contra\Run\contra-right3.xnb
+Content\Sprites\Contra\Run\contra-right4.xnb
+Content\Sprites\Contra\Run\contra-right5.xnb
+Content\Sprites\Contra\RunShoot\contra-run-shoot0.xnb
+Content\Sprites\Contra\RunShoot\contra-run-shoot1.xnb
+Content\Sprites\Contra\RunShoot\contra-run-shoot2.xnb
+Content\Sprites\Contra\RunShoot\contra-run-shoot3.xnb
+Content\Sprites\Contra\Up\contra-up0.xnb
+Content\Sprites\Contra\Up\contra-up1.xnb
+Content\Sprites\Contra\Jump\contra-jump0.xnb
+Content\Sprites\Contra\Jump\contra-jump1.xnb
+Content\Sprites\Contra\Jump\contra-jump2.xnb
+Content\Sprites\Contra\Jump\contra-jump3.xnb
+Content\Sprites\Contra\Jump\contra-jump4.xnb
+Content\Sprites\Contra\Jump\contra-jump5.xnb
+Content\Sprites\Contra\Jump\contra-jump6.xnb
+Content\Sprites\Contra\Jump\contra-jump7.xnb
+Content\Sprites\Contra\Upright\contra-upright0.xnb
+Content\Sprites\Contra\Upright\contra-upright1.xnb
+Content\Sprites\Contra\Upright\contra-upright2.xnb
+Content\Sprites\Contra\Upright\contra-upright3.xnb
+Content\Sprites\Contra\Upright\contra-upright4.xnb
+Content\Sprites\Contra\Upright\contra-upright5.xnb
+Content\Sprites\Contra\Upright\contra-upright6.xnb
+Content\Sprites\Weapons\FireBallRightF1.xnb
+Content\Sprites\Weapons\FireBallRightF2.xnb

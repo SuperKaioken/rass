@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Backgrounds\back1.png</Source>
+      <Name>Backgrounds\back1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back1.xnb</Output>
+      <Time>2009-04-22T18:33:04.549-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\back2.png</Source>
+      <Name>Backgrounds\back2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back2.xnb</Output>
+      <Time>2009-04-22T18:33:04.55-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\back3.png</Source>
+      <Name>Backgrounds\back3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back3.xnb</Output>
+      <Time>2009-04-22T18:33:04.553-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\back4.png</Source>
+      <Name>Backgrounds\back4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back4.xnb</Output>
+      <Time>2009-04-22T18:33:04.555-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\back5.png</Source>
+      <Name>Backgrounds\back5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back5.xnb</Output>
+      <Time>2009-04-22T18:33:04.556-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background.png</Source>
+      <Name>Backgrounds\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\background.xnb</Output>
+      <Time>2009-04-22T18:33:04.571-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\bossLevel.png</Source>
+      <Name>Backgrounds\bossLevel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\bossLevel.xnb</Output>
+      <Time>2009-04-22T18:33:04.573-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\titleShotBack.png</Source>
+      <Name>Backgrounds\titleShotBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\titleShotBack.xnb</Output>
+      <Time>2009-04-22T18:33:04.575-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Health Bar\HealthBar.png</Source>
+      <Name>Sprites\Health Bar\HealthBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Health Bar\HealthBar.xnb</Output>
+      <Time>2009-04-22T18:35:26.719-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Weapons\cannonball.tga</Source>
+      <Name>Sprites\Weapons\cannonball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\cannonball.xnb</Output>
+      <Time>2009-04-22T18:35:44.533-05:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\blank.xnb</Output>
+      <Time>2009-04-22T18:36:04.929-05:00</Time>
+    </Item>
+    <Item>
+      <Source>gradient.png</Source>
+      <Name>gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\gradient.xnb</Output>
+      <Time>2009-04-22T18:36:04.931-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\gamefont.spritefont</Source>
+      <Name>Fonts\gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\gamefont.xnb</Output>
+      <Time>2009-04-22T18:33:35.178-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\menufont.spritefont</Source>
+      <Name>Fonts\menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\menufont.xnb</Output>
+      <Time>2009-04-22T18:33:35.181-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\outline.spritefont</Source>
+      <Name>Fonts\outline</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\outline.xnb</Output>
+      <Time>2009-04-22T18:33:35.183-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\Europe - The Final Countdown.mp3</Source>
+      <Name>Sounds\Europe - The Final Countdown</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.xnb</Output>
+      <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.wma</Extra>
+      <Time>2009-04-22T18:34:03.88-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\through_the.mp3</Source>
+      <Name>Sounds\through_the</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.xnb</Output>
+      <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.wma</Extra>
+      <Time>2009-04-22T18:34:03.969-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\explosion-02.wav</Source>
+      <Name>Sounds\explosion-02</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\explosion-02.xnb</Output>
+      <Time>2009-04-22T18:34:03.883-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\Gun_Silencer.wav</Source>
+      <Name>Sounds\Gun_Silencer</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Gun_Silencer.xnb</Output>
+      <Time>2009-04-22T18:34:03.887-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\Some Cut.mp3</Source>
+      <Name>Sounds\Some Cut</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.xnb</Output>
+      <Extra>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.wma</Extra>
+      <Time>2009-04-22T18:34:03.949-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Stand\contra-stand0.png</Source>
+      <Name>Sprites\Contra\Stand\contra-stand0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand0.xnb</Output>
+      <Time>2009-04-23T14:58:43.175-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Stand\contra-stand1.png</Source>
+      <Name>Sprites\Contra\Stand\contra-stand1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand1.xnb</Output>
+      <Time>2009-04-23T15:01:36.645-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Stand\contra-stand2.png</Source>
+      <Name>Sprites\Contra\Stand\contra-stand2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand2.xnb</Output>
+      <Time>2009-04-23T15:01:36.646-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Stand\contra-stand3.png</Source>
+      <Name>Sprites\Contra\Stand\contra-stand3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand3.xnb</Output>
+      <Time>2009-04-23T15:01:36.647-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right0.png</Source>
+      <Name>Sprites\Contra\Run\contra-right0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right0.xnb</Output>
+      <Time>2009-04-23T15:26:00.87-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right1.png</Source>
+      <Name>Sprites\Contra\Run\contra-right1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right1.xnb</Output>
+      <Time>2009-04-23T15:26:00.872-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right2.png</Source>
+      <Name>Sprites\Contra\Run\contra-right2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right2.xnb</Output>
+      <Time>2009-04-23T15:26:00.874-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right3.png</Source>
+      <Name>Sprites\Contra\Run\contra-right3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right3.xnb</Output>
+      <Time>2009-04-23T15:26:00.875-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right4.png</Source>
+      <Name>Sprites\Contra\Run\contra-right4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right4.xnb</Output>
+      <Time>2009-04-23T15:26:00.876-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Run\contra-right5.png</Source>
+      <Name>Sprites\Contra\Run\contra-right5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right5.xnb</Output>
+      <Time>2009-04-23T15:26:00.878-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\RunShoot\contra-run-shoot0.png</Source>
+      <Name>Sprites\Contra\RunShoot\contra-run-shoot0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot0.xnb</Output>
+      <Time>2009-04-23T16:13:36.84-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\RunShoot\contra-run-shoot1.png</Source>
+      <Name>Sprites\Contra\RunShoot\contra-run-shoot1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot1.xnb</Output>
+      <Time>2009-04-23T16:13:36.841-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\RunShoot\contra-run-shoot2.png</Source>
+      <Name>Sprites\Contra\RunShoot\contra-run-shoot2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot2.xnb</Output>
+      <Time>2009-04-23T16:13:36.844-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\RunShoot\contra-run-shoot3.png</Source>
+      <Name>Sprites\Contra\RunShoot\contra-run-shoot3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot3.xnb</Output>
+      <Time>2009-04-23T16:13:36.845-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Up\contra-up0.png</Source>
+      <Name>Sprites\Contra\Up\contra-up0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up0.xnb</Output>
+      <Time>2009-04-23T16:47:20.696-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Up\contra-up1.png</Source>
+      <Name>Sprites\Contra\Up\contra-up1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up1.xnb</Output>
+      <Time>2009-04-23T16:47:20.697-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump0.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump0.xnb</Output>
+      <Time>2009-04-23T16:58:30.709-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump1.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump1.xnb</Output>
+      <Time>2009-04-23T16:58:30.711-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump2.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump2.xnb</Output>
+      <Time>2009-04-23T16:58:30.714-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump3.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump3.xnb</Output>
+      <Time>2009-04-23T16:58:30.716-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump4.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump4.xnb</Output>
+      <Time>2009-04-23T16:58:30.72-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump5.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump5.xnb</Output>
+      <Time>2009-04-23T16:58:30.722-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump6.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump6.xnb</Output>
+      <Time>2009-04-23T16:58:30.725-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Jump\contra-jump7.png</Source>
+      <Name>Sprites\Contra\Jump\contra-jump7</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump7.xnb</Output>
+      <Time>2009-04-23T16:58:30.726-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright0.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright0.xnb</Output>
+      <Time>2009-04-23T17:27:34.391-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright1.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright1.xnb</Output>
+      <Time>2009-04-23T17:27:34.393-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright2.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright2.xnb</Output>
+      <Time>2009-04-23T17:27:34.395-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright3.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright3.xnb</Output>
+      <Time>2009-04-23T17:27:34.397-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright4.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright4.xnb</Output>
+      <Time>2009-04-23T17:27:34.398-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright5.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright5.xnb</Output>
+      <Time>2009-04-23T17:27:34.4-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Contra\Upright\contra-upright6.png</Source>
+      <Name>Sprites\Contra\Upright\contra-upright6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright6.xnb</Output>
+      <Time>2009-04-23T17:30:05.172-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Weapons\FireBallRightF1.png</Source>
+      <Name>Sprites\Weapons\FireBallRightF1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF1.xnb</Output>
+      <Time>2009-04-23T20:57:34.541-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Weapons\FireBallRightF2.png</Source>
+      <Name>Sprites\Weapons\FireBallRightF2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF2.xnb</Output>
+      <Time>2009-04-23T20:57:34.547-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Xbox360</TargetPlatform>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\Content\obj\Xbox 360\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2008-10-10T17:42:32-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2008-10-10T17:43:28-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2008-10-10T17:43:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2008-10-10T17:48:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2008-10-10T17:48:50-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2009-03-24T17:27:11.744-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

@@ -1,0 +1,121 @@
+10609f5fbbac4933a8a8862da77ac381
+0
+School 360
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\
+128850116900000000
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\GameThumbnail.png
+2009-04-22T23:22:24.3470000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Xbox360Game2.exe
+2009-04-24T02:47:33.8300000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\blank.xnb
+2009-04-22T23:44:13.0560000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\gradient.xnb
+2009-04-22T23:44:13.3330000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\cannonball.xnb
+2009-04-22T23:44:12.7770000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF1.xnb
+2009-04-24T01:57:38.3030000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Weapons\FireBallRightF2.xnb
+2009-04-24T01:57:38.6390000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Health Bar\HealthBar.xnb
+2009-04-22T23:44:12.4990000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright0.xnb
+2009-04-23T22:28:26.6310000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright1.xnb
+2009-04-23T22:28:26.9370000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright2.xnb
+2009-04-23T22:28:27.2300000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright3.xnb
+2009-04-23T22:28:27.5210000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright4.xnb
+2009-04-23T22:28:27.8110000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright5.xnb
+2009-04-23T22:28:28.1120000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Upright\contra-upright6.xnb
+2009-04-23T22:30:09.4500000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up0.xnb
+2009-04-23T21:48:33.0160000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Up\contra-up1.xnb
+2009-04-23T21:48:33.2980000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand0.xnb
+2009-04-23T19:58:46.5500000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand1.xnb
+2009-04-23T20:03:04.2570000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand2.xnb
+2009-04-23T20:03:04.5500000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Stand\contra-stand3.xnb
+2009-04-23T20:03:04.8370000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot0.xnb
+2009-04-23T21:15:08.3110000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot1.xnb
+2009-04-23T21:15:08.6090000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot2.xnb
+2009-04-23T21:15:08.8930000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\RunShoot\contra-run-shoot3.xnb
+2009-04-23T21:15:09.2040000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right0.xnb
+2009-04-23T20:28:58.6040000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right1.xnb
+2009-04-23T20:28:58.8910000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right2.xnb
+2009-04-23T20:28:59.1760000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right3.xnb
+2009-04-23T20:28:59.4570000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right4.xnb
+2009-04-23T20:28:59.7490000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Run\contra-right5.xnb
+2009-04-23T20:29:00.0350000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump0.xnb
+2009-04-23T22:00:27.9810000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump1.xnb
+2009-04-23T22:00:28.2560000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump2.xnb
+2009-04-23T22:00:28.5380000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump3.xnb
+2009-04-23T22:00:28.8130000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump4.xnb
+2009-04-23T22:00:29.0810000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump5.xnb
+2009-04-23T22:00:29.3560000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump6.xnb
+2009-04-23T22:00:29.6350000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sprites\Contra\Jump\contra-jump7.xnb
+2009-04-23T22:00:29.9170000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.wma
+2009-04-24T00:32:34.0640000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Europe - The Final Countdown.xnb
+2009-04-24T00:32:34.1110000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\explosion-02.xnb
+2009-04-24T00:32:49.3030000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Gun_Silencer.xnb
+2009-04-24T00:32:49.3130000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.wma
+2009-04-24T00:32:39.4430000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\Some Cut.xnb
+2009-04-24T00:32:39.4770000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.wma
+2009-04-24T00:32:49.2400000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Sounds\through_the.xnb
+2009-04-24T00:32:49.2790000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\gamefont.xnb
+2009-04-22T23:44:13.8100000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\menufont.xnb
+2009-04-22T23:44:13.9200000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Fonts\outline.xnb
+2009-04-22T23:44:14.0380000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back1.xnb
+2009-04-22T23:44:06.0270000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back2.xnb
+2009-04-22T23:44:06.4300000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back3.xnb
+2009-04-22T23:44:06.8880000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back4.xnb
+2009-04-22T23:44:07.3220000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\back5.xnb
+2009-04-22T23:44:07.9690000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\background.xnb
+2009-04-22T23:44:09.2510000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\bossLevel.xnb
+2009-04-22T23:44:09.6850000Z
+C:\Users\Matt\Documents\Visual Studio 2008\Projects\Xbox360Game2\Xbox360Game2\bin\Xbox 360\Debug\Content\Backgrounds\titleShotBack.xnb
+2009-04-22T23:44:10.1840000Z
