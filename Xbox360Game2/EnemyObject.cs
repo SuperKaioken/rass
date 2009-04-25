@@ -37,7 +37,7 @@ namespace GameStateManagement
             sprite = loadedTexture;
             velocity = Vector2.Zero;
             alive = false;
-            //rect = new Rectangle((int)ScreenManager.GraphicsDevice.Viewport.Width / 2, (int)ScreenManager.GraphicsDevice.Viewport.Height - 150, sprite[spritePosition].Width, sprite[spritePosition].Height);
+            rect = new Rectangle((int)position.X, (int)position.Y, sprite[spritePosition].Width, sprite[spritePosition].Height);
             //viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
             numEnemies = OptionsMenuScreen.getEnemies();
             random = new Random();
@@ -76,7 +76,7 @@ namespace GameStateManagement
 
         public void checkCollision()
         {
-            /*foreach (BallObject ball in dudeBalls)
+            foreach (BallObject ball in dudeBalls)
             {
                 if (ball.alive)
                 {
@@ -86,7 +86,7 @@ namespace GameStateManagement
                         ball.alive = false;
                     }
                 }
-            }*/
+            }
         }
 
         public void setAxeMovement()

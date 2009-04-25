@@ -77,7 +77,7 @@ namespace GameStateManagement
             width = new Vector2(sprite.Width / 2);
             velocity = Vector2.Zero;
             alive = false;
-            rect = new Rectangle(0, 0, sprite.Width, sprite.Height);
+            rect = new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height);
         }
     }
     #endregion    
