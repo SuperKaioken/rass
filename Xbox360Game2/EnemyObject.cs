@@ -16,7 +16,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace GameStateManagement
 {
-    public class EnemyObject : GameplayScreen
+    public class EnemyObject
     {
         public Vector2 velocity;
         public Vector2 position;
@@ -36,7 +36,7 @@ namespace GameStateManagement
             position = new Vector2(300, 100);
             sprite = loadedTexture;
             velocity = Vector2.Zero;
-            alive = false;
+            alive = true;
             rect = new Rectangle((int)position.X, (int)position.Y, sprite[spritePosition].Width, sprite[spritePosition].Height);
             //viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
             numEnemies = OptionsMenuScreen.getEnemies();
@@ -55,10 +55,6 @@ namespace GameStateManagement
 
         public void Update()
         {
-            if (alive)
-            {
-                position += velocity;
-            }
             checkCollision();
             timePassed++;
             if (timePassed > 25)
@@ -76,10 +72,12 @@ namespace GameStateManagement
 
         public void checkCollision()
         {
-            foreach (BallObject ball in dudeBalls)
+            this.rect = new Rectangle((int)this.rect.X, (int)this.rect.Y, this.rect.Width, this.rect.Height);
+            foreach (BallObject ball in GameStateManagement.GameplayScreen.dudeBalls)
             {
                 if (ball.alive)
                 {
+                    ball.rect = new Rectangle((int)ball.position.X, (int)ball.position.Y, ball.rect.Width, ball.rect.Height);
                     if (ball.rect.Intersects(this.rect))
                     {
                         this.alive = false;
@@ -98,6 +96,7 @@ namespace GameStateManagement
 
         public void draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (this.alive)
                 spriteBatch.Draw(sprite[spritePosition], position, Color.White);
         }
     }

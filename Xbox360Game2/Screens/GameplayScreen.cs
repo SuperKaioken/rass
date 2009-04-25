@@ -139,8 +139,8 @@ namespace GameStateManagement
         int maxdudeBalls = 30;
         int maxSuperdudeBalls = 3;
         int superCount = 0;
-        public BallObject[] dudeBalls;
-        public SuperBallObject[] SuperdudeBalls;
+        public static BallObject[] dudeBalls;
+        SuperBallObject[] SuperdudeBalls;
         EnemyObject[] enemies;
         Texture2D healthBar;
         GamePadState previousGamePadState = GamePad.GetState(PlayerIndex.One);
@@ -530,7 +530,7 @@ namespace GameStateManagement
 
                                 dude.sprite = dude.spriteSheetRunShoot[dude.currentFrame];
                                 dude.dir = Dirs.RUNSHOOTRIGHT;
-                                dude.destRect.X += 2;
+                                dude.destRect.X += 4;
 
                                 FireDudeBall();
                             }
@@ -551,7 +551,7 @@ namespace GameStateManagement
 
                                 dude.sprite = dude.spriteSheetRun[dude.currentFrame];
                                 dude.dir = Dirs.RUNRIGHT;
-                                dude.destRect.X += 2;                                
+                                dude.destRect.X += 4;                                
                             }
                             #endregion                            
                             #region Move Upright (and shoot)
@@ -701,7 +701,7 @@ namespace GameStateManagement
 
                                 dude.sprite = dude.spriteSheetRun[dude.currentFrame];
                                 dude.dir = Dirs.RUNLEFT;
-                                dude.destRect.X -= 2;
+                                dude.destRect.X -= 4;
                             }
                             #endregion                                                                                                                                        
                             #region A Press
@@ -721,11 +721,11 @@ namespace GameStateManagement
                 #region Boundaries
                 if (dude.destRect.X > ScreenManager.GraphicsDevice.Viewport.Width - dude.destRect.Width)
                 {
-                    dude.destRect.X -= 5;
+                    dude.destRect.X -= 4;
                 }
-                else if (dude.destRect.X < 5)
+                else if (dude.destRect.X < 4)
                 {
-                    dude.destRect.X += 5;
+                    dude.destRect.X += 4;
                 }
                 #endregion
 #endif
