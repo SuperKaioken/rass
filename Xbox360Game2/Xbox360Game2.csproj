@@ -68,6 +68,7 @@
     <Compile Include="Game.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boss.cs" />
     <Compile Include="EnemyGenerator.cs" />
     <Compile Include="Game.ico" />
     <Compile Include="ScreenManager\GameScreen.cs" />

@@ -99,7 +99,12 @@ namespace GameStateManagement
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (this.alive)
-                spriteBatch.Draw(sprite[spritePosition], position, Color.White);
+            {
+                if (velocity.X < 0)
+                    spriteBatch.Draw(sprite[spritePosition], position, null, Color.White, 0.0f, Vector2.Zero, 1.0f, SpriteEffects.FlipHorizontally, 0);
+                else
+                    spriteBatch.Draw(sprite[spritePosition], position, null, Color.White, 0.0f, Vector2.Zero, 1.0f, SpriteEffects.None, 0);
+            }
         }
     }
 }

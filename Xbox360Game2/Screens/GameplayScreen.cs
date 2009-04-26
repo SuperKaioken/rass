@@ -25,10 +25,10 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace GameStateManagement
 {
-    enum Dirs { RUNLEFT, RUNRIGHT, UPRIGHT, UPLEFT, UP, RUNSHOOTRIGHT, RUNSHOOTLEFT, STANDRIGHT, STANDLEFT, JUMPUP, JUMPDOWN };   
+    public enum Dirs { RUNLEFT, RUNRIGHT, UPRIGHT, UPLEFT, UP, RUNSHOOTRIGHT, RUNSHOOTLEFT, STANDRIGHT, STANDLEFT, JUMPUP, JUMPDOWN };   
 
     #region GameObject
-    class GameObject
+    public class GameObject
     {
         public int health;
         public Texture2D sprite;        
@@ -133,7 +133,7 @@ namespace GameStateManagement
         SpriteBatch spriteBatch;
         Texture2D backgroundTexture;
         public static Rectangle viewportRect;
-        GameObject dude;
+        public static GameObject dude;
 
         int bulletOptions = OptionsMenuScreen.currentBullets;
         int maxdudeBalls = 30;
@@ -270,6 +270,8 @@ namespace GameStateManagement
             //}
             EnemyGenerator.LoadContent(Content);
             enemyGen = new EnemyGenerator();
+
+            Boss.LoadContent(Content);
         }
 
 
