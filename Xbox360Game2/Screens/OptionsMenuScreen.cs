@@ -76,7 +76,7 @@ namespace GameStateManagement
         void SetMenuEntryText()
         {
             bulletMenuEntry.Text = "Bullet Speed: " + bullets[currentBullets];
-            difficultyMenuEntry.Text = "Enemy Speed: " + enemies[currentDifficulty];
+            difficultyMenuEntry.Text = "Enemy Count: " + enemies[currentDifficulty];
         }
         #endregion
 
