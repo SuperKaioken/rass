@@ -16,6 +16,7 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace GameStateManagement
 {
+    //enum eType { AXE, LANCE, SHIP, SPIKEY, SLIME, BALL, THING, PULSE, BLUEEYE, GOLDEYE };
     public class EnemyObject
     {
         public Vector2 velocity;
@@ -25,25 +26,22 @@ namespace GameStateManagement
         public Rectangle destRect;
         public bool alive;
         public Rectangle rect;
-        Rectangle viewportRect;
         public int numEnemies;
         public Random random;
-        public int timePassed = 0; 
+        public int timePassed = 0;
 
-        public EnemyObject(Texture2D[] loadedTexture)
+        public EnemyObject(Texture2D[] loadedTexture, Vector2 startPosition, Vector2 startVelocity)
         {
             spritePosition = 0;
-            position = new Vector2(300, 100);
+            position = startPosition;
             sprite = loadedTexture;
-            velocity = Vector2.Zero;
+            velocity = startVelocity;
             alive = true;
             rect = new Rectangle((int)position.X, (int)position.Y, sprite[spritePosition].Width, sprite[spritePosition].Height);
-            //viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
             numEnemies = OptionsMenuScreen.getEnemies();
             random = new Random();
             
-
-            //velocity.X = 100;
+            velocity.X = 100;
             if (numEnemies == 0)
                 velocity.X = 1;
             else if (numEnemies == 1)
@@ -56,6 +54,8 @@ namespace GameStateManagement
         public void Update()
         {
             checkCollision();
+            //if it's the axe enemy, do this (need some way to check what enemy it is)
+            axeMovement();
             timePassed++;
             if (timePassed > 25)
             {
@@ -64,15 +64,17 @@ namespace GameStateManagement
                 {
                     spritePosition = 0;
                 }
-                timePassed = 0; 
+                timePassed = 0;
             }
-            //if it's the axe enemy, do this (need some way to check what enemy it is)
-            this.setAxeMovement();
+            if (position.X < 0)
+                velocity.X = velocity.X * -1.0f;
+            else if (position.X > GameStateManagement.GameplayScreen.viewportRect.Width - sprite[spritePosition].Width)
+                velocity.X = velocity.X * -1.0f;
         }
 
         public void checkCollision()
         {
-            this.rect = new Rectangle((int)this.rect.X, (int)this.rect.Y, this.rect.Width, this.rect.Height);
+            this.rect = new Rectangle((int)this.position.X, (int)this.position.Y, this.rect.Width, this.rect.Height);
             foreach (BallObject ball in GameStateManagement.GameplayScreen.dudeBalls)
             {
                 if (ball.alive)
@@ -87,14 +89,14 @@ namespace GameStateManagement
             }
         }
 
-        public void setAxeMovement()
+        public void axeMovement()
         {
             position.X += velocity.X;
             position.Y += (float)random.NextDouble() * 2.0f;
             position.Y -= (float)random.NextDouble() * 2.0f;
         }
 
-        public void draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (this.alive)
                 spriteBatch.Draw(sprite[spritePosition], position, Color.White);

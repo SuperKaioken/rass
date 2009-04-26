@@ -132,7 +132,7 @@ namespace GameStateManagement
 
         SpriteBatch spriteBatch;
         Texture2D backgroundTexture;
-        Rectangle viewportRect;
+        public static Rectangle viewportRect;
         GameObject dude;
 
         int bulletOptions = OptionsMenuScreen.currentBullets;
@@ -146,6 +146,7 @@ namespace GameStateManagement
         GamePadState previousGamePadState = GamePad.GetState(PlayerIndex.One);
         KeyboardState previousKeyboardState = Keyboard.GetState();
         float spaceTime;
+        EnemyGenerator enemyGen;
 
         Song eEgg;
         Song lastLevelIntro;
@@ -267,64 +268,8 @@ namespace GameStateManagement
                 //Thread.Sleep(13000);
                 //MediaPlayer.Play(lastLevelSong);
             //}
-
-			//make the axe enemy
-            enemySprite = new Texture2D[4];
-            for (int i = 0; i < 4; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\axe" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);
-            //make the ball enemy
-            /*enemySprite = new Texture2D[4];
-            for (int i = 0; i < 4; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\ball" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-            //make the blue eye enemy
-           /* enemySprite = new Texture2D[3];
-            for (int i = 0; i < 3; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\blueeye" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-            //make the goldeye enemy
-           /* enemySprite = new Texture2D[3];
-            for (int i = 0; i < 3; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\goldeye" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-            //make the lance enemy
-            /*enemySprite = new Texture2D[9];
-            for (int i = 0; i < 9; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\lance" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-            //make the pulse enemy
-           /* enemySprite = new Texture2D[4];
-            for (int i = 0; i < 4; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\pulse" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-            //make the slime enemy
-            /*enemySprite = new Texture2D[5];
-            for (int i = 0; i < 5; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\slime" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
-
-            //make the thing enemy
-            /*enemySprite = new Texture2D[6];
-            for (int i = 0; i < 6; i++)
-            {
-                enemySprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\thing" + i.ToString());
-            }
-            enemy = new EnemyObject(enemySprite);*/
+            EnemyGenerator.LoadContent(Content);
+            enemyGen = new EnemyGenerator();
         }
 
 
@@ -444,7 +389,7 @@ namespace GameStateManagement
                             if (gamePadState.ThumbSticks.Right.X >= 0.25f && (gamePadState.ThumbSticks.Right.Y >= -0.25f && gamePadState.ThumbSticks.Right.Y <= 0.25f))
                             {
                                 dude.dir = Dirs.STANDRIGHT;
-                                dude.sprite = dude.spriteSheetStand[1];
+                                dude.sprite = dude.spriteSheetStand[0];
 
                                 if (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f)
                                     FireDudeBall();
@@ -484,7 +429,7 @@ namespace GameStateManagement
                             else if (gamePadState.ThumbSticks.Right.X < -0.25f && (gamePadState.ThumbSticks.Right.Y >= -0.25f && gamePadState.ThumbSticks.Right.Y <= 0.25f))
                             {
                                 dude.dir = Dirs.STANDLEFT;
-                                dude.sprite = dude.spriteSheetStand[1];
+                                dude.sprite = dude.spriteSheetStand[0];
 
                                 if (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f)
                                     FireDudeBall();
@@ -742,10 +687,7 @@ namespace GameStateManagement
 #endif
             }
 
-			enemy.Update();//new shit
-
-            //foreach (EnemyObject enemy in enemies)
-            //    enemy.Update();
+            enemyGen.Update();
 
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
         }
@@ -1004,10 +946,6 @@ namespace GameStateManagement
             //                       enemyPosition, Color.DarkRed);
             spriteBatch.Draw(backgroundTexture, viewportRect, Color.White);
 
-			// NEW SHIT
-            enemy.draw(gameTime, spriteBatch);
-
-
             if (dude.dir == Dirs.RUNLEFT || dude.dir == Dirs.UPLEFT || dude.dir == Dirs.RUNSHOOTLEFT || dude.dir == Dirs.STANDLEFT)            
                 spriteBatch.Draw(dude.sprite, dude.destRect, null, Color.White, 0.0f, Vector2.Zero, SpriteEffects.FlipHorizontally, 0.0f);               
             else if (dude.dir == Dirs.RUNRIGHT || dude.dir == Dirs.UPRIGHT || dude.dir == Dirs.UP || dude.dir == Dirs.RUNSHOOTRIGHT || dude.dir == Dirs.STANDRIGHT)
@@ -1055,6 +993,8 @@ namespace GameStateManagement
             
             spriteBatch.DrawString(outlineFont, "HEALTH", new Vector2(15, 0), Color.Red);
             spriteBatch.DrawString(font, "HEALTH", new Vector2(15, 0), Color.White);
+
+            enemyGen.Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
 
