@@ -31,6 +31,7 @@ namespace GameStateManagement
     public class GameObject
     {
         public int health;
+        public int lives;
         public Texture2D sprite;        
         public Dirs dir = Dirs.STANDRIGHT;
         public float timer = 0;
@@ -57,7 +58,7 @@ namespace GameStateManagement
     #endregion
 
     #region BallObject
-    public class BallObject : GameplayScreen
+    public class BallObject
     {
         public Texture2D sprite;
         public Vector2 position;
@@ -119,13 +120,11 @@ namespace GameStateManagement
     public class GameplayScreen : GameScreen
     {
         #region Globals
-        ContentManager Content;
+        public static ContentManager Content;
         
         SpriteFont gameFont;
         SpriteFont font;
         SpriteFont outlineFont;
-
-        string egg = "";
 
         Vector2 playerPosition = new Vector2(100, 100);
         Vector2 enemyPosition = new Vector2(100, 100);
@@ -136,6 +135,8 @@ namespace GameStateManagement
         Texture2D backgroundTexture;
         public static Rectangle viewportRect;
         public static GameObject dude;
+        int livesNum, healthNum;
+        public static int killsNeeded;
 
         int bulletOptions = OptionsMenuScreen.currentBullets;
         int maxdudeBalls = 30;
@@ -143,7 +144,6 @@ namespace GameStateManagement
         int superCount = 0;
         public static BallObject[] dudeBalls;
         public static SuperBallObject[] SuperdudeBalls;
-        EnemyObject[] enemies;
         Texture2D healthBar;
         GamePadState previousGamePadState = GamePad.GetState(PlayerIndex.One);
         KeyboardState previousKeyboardState = Keyboard.GetState();
@@ -154,20 +154,15 @@ namespace GameStateManagement
         Song lastLevelIntro;
         Song lastLevelSong;
         SoundEffect gunShot;
-        SoundEffect explosion;
-		EnemyObject enemy; //testing [JD] new shit
-        Texture2D[] enemySprite; //new shit
-
-        Texture2D[] backgrounds;
-        int backgroundNum = 0;
-        level currentLevel = level.one;
+        SoundEffect fireball;
+        level currentLevel;
         #endregion
 
         #region Initialization
         /// <summary>
         /// Constructor.
         /// </summary>
-        public GameplayScreen()
+        public GameplayScreen(int healthNums, int livesNums, level levelNum)
         {
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
@@ -178,6 +173,10 @@ namespace GameStateManagement
                 maxdudeBalls = 15;
             else if (bulletOptions == 2)
                 maxdudeBalls = 5;
+
+            healthNum = healthNums;
+            livesNum = livesNums;
+            currentLevel = levelNum;
 
             //graphics = new GraphicsDeviceManager(ScreenManager);
             //Content.RootDirectory = "Content";
@@ -203,12 +202,33 @@ namespace GameStateManagement
             eEgg = Content.Load<Song>("Sounds\\Some Cut");
             lastLevelIntro = Content.Load<Song>("Sounds\\The Final Countdown");
             lastLevelSong = Content.Load<Song>("Sounds\\through_the");
-            gunShot = Content.Load<SoundEffect>("Sounds\\Gun_Silencer");
-            explosion = Content.Load<SoundEffect>("Sounds\\explosion-02");
+            gunShot = Content.Load<SoundEffect>("Sounds\\Gun_Silencer");            
+            fireball = Content.Load<SoundEffect>("Sounds\\Fireball");
 
-            backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back5");
+            if (currentLevel == level.one)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back5");
+                killsNeeded = (int)level.one;
+            }
+            else if (currentLevel == level.two)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back1");
+                killsNeeded = (int)level.two;
+            }
+            else if (currentLevel == level.three)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back2");
+                killsNeeded = (int)level.three;
+            }
+            else if (currentLevel == level.four)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back4");
+                killsNeeded = (int)level.four;
+            }
 
             dude = new GameObject(Content.Load<Texture2D>("Sprites\\Contra\\Stand\\contra-stand0"));
+            dude.lives = livesNum;
+            dude.health = healthNum;
 
             dude.spriteSheetStand = new Texture2D [4];
             for (int i = 0; i < 4; i++)
@@ -237,8 +257,7 @@ namespace GameStateManagement
 
             dude.destRect = new Rectangle((int)ScreenManager.GraphicsDevice.Viewport.Width / 2, (int)ScreenManager.GraphicsDevice.Viewport.Height - 150, dude.spriteWidthStand, dude.spriteHeight);
             dude.position = new Vector2(ScreenManager.GraphicsDevice.Viewport.Width / 2, ScreenManager.GraphicsDevice.Viewport.Height - 80);
-
-            dude.health = 100;
+            
             healthBar = Content.Load<Texture2D>("Sprites\\Health Bar\\HealthBar");
 
             dudeBalls = new BallObject[maxdudeBalls];
@@ -256,29 +275,17 @@ namespace GameStateManagement
                 SuperdudeBalls[i].FireBallFrame[1] = Content.Load<Texture2D>("Sprites\\Weapons\\FireBallRightF2");
             }
 
-            backgrounds = new Texture2D[5];
-            for (int i = 0; i < 5; i++)
-            {
-                backgrounds[i] = Content.Load<Texture2D>("Backgrounds\\back" + (i+1).ToString());
-            }
+            //backgrounds = new Texture2D[5];
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    backgrounds[i] = Content.Load<Texture2D>("Backgrounds\\back" + (i+1).ToString());
+            //}
             viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
 
             // once the load has finished, we use ResetElapsedTime to tell the game's
             // timing mechanism that we have just finished a very long frame, and that
             // it should not try to catch up.
-            ScreenManager.Game.ResetElapsedTime();
-
-            //if (backgroundTexture.ToString() == "back5")
-            //{
-                //MediaPlayer.Play(lastLevelIntro);
-                //while (MediaPlayer.State == MediaState.Playing)
-                //{
-                //    //Do nothing
-                //}
-                //MediaPlayer.Stop();
-                //Thread.Sleep(13000);
-                //MediaPlayer.Play(lastLevelSong);
-            //}
+            ScreenManager.Game.ResetElapsedTime();            
             EnemyGenerator.LoadContent(Content);
             enemyGen = new EnemyGenerator();
 
@@ -688,27 +695,32 @@ namespace GameStateManagement
 #endif
             }
 
+            enemyGen.setKillsNeeded(killsNeeded);
             enemyGen.MakeEnemy(currentLevel);
             enemyGen.Update();
 
-            if (EnemyGenerator.killsNeeded <= 0)
+            if (killsNeeded <= 0)
             {
-                switch (currentLevel)
+                if(currentLevel == level.one)
                 {
-                    case level.one:
-                        EnemyGenerator.killsNeeded = (int)level.two;
-                        backgroundTexture = backgrounds[backgroundNum++];
-                        currentLevel = level.two;
-                        break;
-                    case level.two:
-                        EnemyGenerator.killsNeeded = (int)level.three;
-                        backgroundTexture = backgrounds[backgroundNum++];
-                        currentLevel = level.three;
-                        break;
-                    case level.three:
-                        backgroundTexture = backgrounds[backgroundNum++];
-                        break;
+                    //MediaPlayer.Play(lastLevelSong);
+                    LoadingScreen.Load(ScreenManager, "Level 2", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.two));
                 }
+                else if(currentLevel == level.two)     
+                {
+                    //MediaPlayer.Stop();
+                    LoadingScreen.Load(ScreenManager, "Level 3", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.three));
+                }                   
+                else if(currentLevel == level.three)
+                {
+                    LoadingScreen.Load(ScreenManager, "Level 4", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.four));
+                }                
+            }
+
+            if (dude.health <= 0)
+            {
+                dude.health = 100;
+                dude.lives--;
             }
 
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
@@ -804,8 +816,7 @@ namespace GameStateManagement
                         ball.velocity.X = 0.0f;
                         ball.velocity.Y = -8.0f;
                     }
-                    return;
-                    gunShot.Dispose();
+                    return;                    
                 }
             }
         }
@@ -997,19 +1008,22 @@ namespace GameStateManagement
                 }
             }
 
+            enemyGen.Draw(gameTime, spriteBatch);
+
             //Draw the negative space for the health bar            
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) - 40, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black);
+            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the current health level based on the current Health
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) - 40, 10, (int)((healthBar.Width / 2) * ((double)dude.health / 100)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Green);
+            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (int)((healthBar.Width / 2) * ((double)dude.health / 100)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Green, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the box around the health bar
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) - 40, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White);
+            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
             
             spriteBatch.DrawString(outlineFont, "HEALTH", new Vector2(15, 0), Color.Red);
             spriteBatch.DrawString(font, "HEALTH", new Vector2(15, 0), Color.White);
 
-            enemyGen.Draw(gameTime, spriteBatch);
+            for (int i = 0; i < dude.lives; i++)
+                spriteBatch.Draw(Content.Load<Texture2D>("Sprites\\Contra\\lives"), new Rectangle((i * 30) + 400, 10, 25, 22), Color.White);
 
             spriteBatch.End();
 

@@ -30,7 +30,8 @@ namespace GameStateManagement
         public Rectangle rect;
         public int numEnemies;
         public Random random;
-        public int timePassed = 0;        
+        public int timePassed = 0;
+        public SoundEffect sound;        
 
         public EnemyObject(Texture2D[] loadedTexture, Vector2 startPosition, Vector2 startVelocity)
         {
@@ -66,6 +67,9 @@ namespace GameStateManagement
                 if (spritePosition > sprite.Length - 1)
                 {
                     spritePosition = 0;
+                    Random rand = new Random();
+                    if(rand.Next(10) == 5 && sound != null)
+                        sound.Play();
                 }
                 timePassed = 0;
             }
@@ -91,8 +95,9 @@ namespace GameStateManagement
                     {
                         this.alive = false;
                         ball.alive = false;
-                        this.dying = true;
-                        EnemyGenerator.killsNeeded--;
+                        this.dying = true;                                    
+                        GameplayScreen.killsNeeded--;
+                        EnemyGenerator.playExplosion();
                     }
                 }
                 else if (this.dying)
@@ -111,7 +116,8 @@ namespace GameStateManagement
                     {
                         this.alive = false;
                         this.dying = true;
-                        EnemyGenerator.killsNeeded--;
+                        GameplayScreen.killsNeeded--;
+                        EnemyGenerator.playExplosion();
                     }
                 }
                 else if (this.dying)
@@ -120,6 +126,20 @@ namespace GameStateManagement
                     return;
                 }
             }
+
+            if (this.rect.Intersects(GameplayScreen.dude.destRect) && !this.dying)
+            {                   
+                GameplayScreen.dude.health -= 5;
+                GameplayScreen.killsNeeded--;
+                EnemyGenerator.playExplosion();
+                this.dying = true;
+                this.alive = false;
+            }                
+            else if (this.dying)
+            {
+                explode();
+                return;
+            }            
         }
 
         public void explode()

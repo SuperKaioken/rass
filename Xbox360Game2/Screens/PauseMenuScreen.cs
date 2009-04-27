@@ -73,7 +73,7 @@ namespace GameStateManagement
         /// </summary>
         void ConfirmQuitMessageBoxAccepted(object sender, PlayerIndexEventArgs e)
         {
-            LoadingScreen.Load(ScreenManager, false, null, new BackgroundScreen(),
+            LoadingScreen.Load(ScreenManager, "Main Menu", null, new BackgroundScreen(),
                                                            new MainMenuScreen());
         }
 

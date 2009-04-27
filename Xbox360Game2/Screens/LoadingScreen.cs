@@ -33,7 +33,7 @@ namespace GameStateManagement
     {
         #region Fields
 
-        bool loadingIsSlow;
+        string loadingTitle;
         bool otherScreensAreGone;
 
         GameScreen[] screensToLoad;
@@ -47,10 +47,10 @@ namespace GameStateManagement
         /// The constructor is private: loading screens should
         /// be activated via the static Load method instead.
         /// </summary>
-        private LoadingScreen(ScreenManager screenManager, bool loadingIsSlow,
+        private LoadingScreen(ScreenManager screenManager, string loadingTitle,
                               GameScreen[] screensToLoad)
         {
-            this.loadingIsSlow = loadingIsSlow;
+            this.loadingTitle = loadingTitle;
             this.screensToLoad = screensToLoad;
 
             TransitionOnTime = TimeSpan.FromSeconds(0.5);
@@ -60,17 +60,20 @@ namespace GameStateManagement
         /// <summary>
         /// Activates the loading screen.
         /// </summary>
-        public static void Load(ScreenManager screenManager, bool loadingIsSlow,
+        public static void Load(ScreenManager screenManager, string loadingTitle,
                                 PlayerIndex? controllingPlayer,
                                 params GameScreen[] screensToLoad)
         {
-            // Tell all the current screens to transition off.
-            foreach (GameScreen screen in screenManager.GetScreens())
-                screen.ExitScreen();
+            //if (loadingTitle == "Main Menu" || loadingTitle == "Level 1")
+            //{
+                // Tell all the current screens to transition off.
+                foreach (GameScreen screen in screenManager.GetScreens())
+                    screen.ExitScreen();
+            //}                                                            
 
             // Create and activate the loading screen.
             LoadingScreen loadingScreen = new LoadingScreen(screenManager,
-                                                            loadingIsSlow,
+                                                            loadingTitle,
                                                             screensToLoad);
 
             screenManager.AddScreen(loadingScreen, controllingPlayer);
@@ -96,11 +99,14 @@ namespace GameStateManagement
             {
                 ScreenManager.RemoveScreen(this);
 
-                foreach (GameScreen screen in screensToLoad)
+                if (screensToLoad != null)
                 {
-                    if (screen != null)
+                    foreach (GameScreen screen in screensToLoad)
                     {
-                        ScreenManager.AddScreen(screen, ControllingPlayer);
+                        if (screen != null)
+                        {
+                            ScreenManager.AddScreen(screen, ControllingPlayer);
+                        }
                     }
                 }
 
@@ -134,12 +140,12 @@ namespace GameStateManagement
             // second while returning from the game to the menus. This parameter
             // tells us how long the loading is going to take, so we know whether
             // to bother drawing the message.
-            if (loadingIsSlow)
-            {
+            //if (loadingIsSlow)
+            //{
                 SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
                 SpriteFont font = ScreenManager.Font;
 
-                const string message = "Loading...";
+                string message = "Loading ... " + loadingTitle;
 
                 // Center the text in the viewport.
                 Viewport viewport = ScreenManager.GraphicsDevice.Viewport;
@@ -153,7 +159,7 @@ namespace GameStateManagement
                 spriteBatch.Begin();
                 spriteBatch.DrawString(font, message, textPosition, color);
                 spriteBatch.End();
-            }
+            //}
         }
 
 

@@ -28,7 +28,7 @@ namespace GameStateManagement
     {
         #region Fields
 
-        List<GameScreen> screens = new List<GameScreen>();
+        public List<GameScreen> screens = new List<GameScreen>();
         List<GameScreen> screensToUpdate = new List<GameScreen>();
 
         InputState input = new InputState();
