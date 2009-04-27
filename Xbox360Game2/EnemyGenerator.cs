@@ -16,19 +16,23 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace GameStateManagement
 {
+    public enum level { one = 50, two = 75, three = 100 };
+
     public class EnemyGenerator
     {
         List<EnemyObject> enemies;
         public static Texture2D[] axeSprite, ballSprite, lanceSprite, thingSprite, spikeySprite, shipSprite, pulseSprite, slimeSprite, blueeyeSprite, goldeyeSprite;
+        public static Texture2D[] explosionSprite;
         Random random;
+        int maxEnemiesOnScreen;
+        public static int killsNeeded;
 
         public EnemyGenerator()
         {
             random = new Random();
             enemies = new List<EnemyObject>();
-            enemies.Add(new EnemyObject(axeSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 150) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
-            enemies.Add(new EnemyObject(ballSprite, new Vector2(100, 100), new Vector2(-10, 0)));
-            enemies.Add(new EnemyObject(lanceSprite, new Vector2(300, 200), new Vector2(50, 0)));                
+            maxEnemiesOnScreen = 10;
+            killsNeeded = (int)level.one;
         }
 
         public static void LoadContent(ContentManager Content)
@@ -100,8 +104,23 @@ namespace GameStateManagement
             {
                 thingSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\thing" + i.ToString());
             }
+
+            //make the explosions
+            explosionSprite = new Texture2D[16];
+            for (int i = 0; i < 16; i++)
+            {
+                explosionSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\explosion" + i.ToString());
+            }
+
+            //make the spikey enemy
+            spikeySprite = new Texture2D[1];
+            spikeySprite[0] = Content.Load<Texture2D>("Sprites\\Enemies\\spikey");
+
+            //make the ship enemy
+            shipSprite = new Texture2D[1];
+            shipSprite[0] = Content.Load<Texture2D>("Sprites\\Enemies\\ship");
         }
-        
+
         public void Update()
         {
             foreach (EnemyObject enemy in enemies)
@@ -109,7 +128,7 @@ namespace GameStateManagement
 
             for (int i = 0; i < enemies.Count; i++)
             {
-                if (!enemies[i].alive)
+                if (!enemies[i].alive && !enemies[i].dying)
                     enemies.RemoveAt(i);
             }
         }
@@ -117,7 +136,73 @@ namespace GameStateManagement
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             foreach (EnemyObject enemy in enemies)
+            {
+                if (enemy.dying)
+                {
+                    enemy.sprite = new Texture2D[explosionSprite.Length];
+                    explosionSprite.CopyTo(enemy.sprite, 0);
+                }
+
                 enemy.Draw(gameTime, spriteBatch);
+            }
+        }
+
+        public void MakeEnemy(level level)
+        {
+            Random rand = new Random();
+
+            if (enemies.Count() < (int)maxEnemiesOnScreen && killsNeeded > 0)
+            {
+                switch (level)
+                {
+                    case level.one: 
+                        switch (rand.Next(3))
+                        {
+                            case 0:
+                                enemies.Add(new EnemyObject(axeSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                            case 1:
+                                enemies.Add(new EnemyObject(ballSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                            case 2:
+                                enemies.Add(new EnemyObject(lanceSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                        }
+                        break;
+                    case level.two:
+                        switch (rand.Next(4))
+                        {
+                            case 0:
+                                enemies.Add(new EnemyObject(blueeyeSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                            case 1:
+                                enemies.Add(new EnemyObject(slimeSprite, new Vector2(0, GameStateManagement.GameplayScreen.viewportRect.Height - 150), new Vector2(5, 0)));
+                                break;
+                            case 2:
+                                enemies.Add(new EnemyObject(goldeyeSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                            case 3:
+                                enemies.Add(new EnemyObject(spikeySprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                        }
+                        break;
+                    case level.three:
+                        switch (rand.Next(3))
+                        {
+                            case 0:
+                                enemies.Add(new EnemyObject(pulseSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                            case 1:
+                                enemies.Add(new EnemyObject(shipSprite, new Vector2(0, GameStateManagement.GameplayScreen.viewportRect.Height - 150), new Vector2(5, 0)));
+                                break;
+                            case 2:
+                                enemies.Add(new EnemyObject(thingSprite, new Vector2(0, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 0)));
+                                break;
+                        }
+                        break;
+
+                }
+            }
         }
     }
 }
