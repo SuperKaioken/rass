@@ -79,7 +79,7 @@ namespace GameStateManagement
                 case state.HIT:
                     currentSheet = hitSheet;
                     nextState = previousState;
-                    if (health = 0)
+                    if (health == 0)
                     {
                         nextState = state.DEATH;
                     }
