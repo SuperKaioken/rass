@@ -45,13 +45,13 @@ namespace GameStateManagement
             random = new Random();
 
             
-            velocity.X = 100;
-            if (numEnemies == 0)
-                velocity.X = 1;
-            else if (numEnemies == 1)
-                velocity.X = 2;
-            else if (numEnemies == 2)
-                velocity.X = 3; 
+            //velocity.X = 100;
+            //if (numEnemies == 0)
+            //    velocity.X = 1;
+            //else if (numEnemies == 1)
+            //    velocity.X = 2;
+            //else if (numEnemies == 2)
+            //    velocity.X = 3; 
 
         }
         
