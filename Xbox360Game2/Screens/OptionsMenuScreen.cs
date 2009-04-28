@@ -25,10 +25,10 @@ namespace GameStateManagement
         MenuEntry bulletMenuEntry;
         MenuEntry difficultyMenuEntry;   
 
-        static string[] bullets = { "Fast", "Medium", "Slow" };
+        static string[] bullets = { "A lot", "Some", "Not So Many\n(Chance of survival: NONE)" };
         public static int currentBullets = 0;
 
-        static string[] enemies = { "Slow", "Medium", "Fast" };
+        static string[] enemies = { "Slow", "Medium", "Fast (Good Luck)" };
         public static int currentDifficulty = 0;
 		public static int numEnemies = 0; 
 
@@ -47,7 +47,7 @@ namespace GameStateManagement
 
             SetMenuEntryText();
 
-            MenuEntry backMenuEntry = new MenuEntry("Back");
+            MenuEntry backMenuEntry = new MenuEntry("\n\nBack");
 
             // Hook up menu event handlers.
             bulletMenuEntry.Selected += BulletMenuEntrySelected;
@@ -75,8 +75,8 @@ namespace GameStateManagement
         /// </summary>
         void SetMenuEntryText()
         {
-            bulletMenuEntry.Text = "Bullet Speed: " + bullets[currentBullets];
-            difficultyMenuEntry.Text = "Enemy Count: " + enemies[currentDifficulty];
+            bulletMenuEntry.Text = "Bullet Count: " + bullets[currentBullets];
+            difficultyMenuEntry.Text = "\nEnemy Speed: " + enemies[currentDifficulty];
         }
         #endregion
 

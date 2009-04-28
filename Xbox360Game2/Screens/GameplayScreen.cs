@@ -220,10 +220,10 @@ namespace GameStateManagement
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back2");
                 killsNeeded = (int)level.three;
             }
-            else if (currentLevel == level.four)
+            else if (currentLevel == level.boss)
             {
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back4");
-                killsNeeded = (int)level.four;
+                killsNeeded = (int)level.boss;
             }
 
             dude = new GameObject(Content.Load<Texture2D>("Sprites\\Contra\\Stand\\contra-stand0"));
@@ -287,9 +287,7 @@ namespace GameStateManagement
             // it should not try to catch up.
             ScreenManager.Game.ResetElapsedTime();            
             EnemyGenerator.LoadContent(Content);
-            enemyGen = new EnemyGenerator();
-
-            Boss.LoadContent(Content);
+            enemyGen = new EnemyGenerator();           
         }
 
 
@@ -713,14 +711,23 @@ namespace GameStateManagement
                 }                   
                 else if(currentLevel == level.three)
                 {
-                    LoadingScreen.Load(ScreenManager, "Level 4", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.four));
-                }                
+                    LoadingScreen.Load(ScreenManager, "BOSS", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.boss));
+                }
+                else if (currentLevel == level.boss)
+                {
+                    LoadingScreen.Load(ScreenManager, "You Win!", ControllingPlayer.Value, new BackgroundScreen(), new MainMenuScreen());
+                }
             }
 
             if (dude.health <= 0)
             {
                 dude.health = 100;
                 dude.lives--;
+            }
+
+            if(dude.lives <= 0)
+            {
+                LoadingScreen.Load(ScreenManager, "GAME OVER", ControllingPlayer.Value, new BackgroundScreen(), new MainMenuScreen());
             }
 
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
@@ -1009,6 +1016,7 @@ namespace GameStateManagement
             }
 
             enemyGen.Draw(gameTime, spriteBatch);
+            enemyGen.boss.Draw(gameTime, spriteBatch);
 
             //Draw the negative space for the health bar            
             spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);

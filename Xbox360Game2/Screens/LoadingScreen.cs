@@ -144,8 +144,13 @@ namespace GameStateManagement
             //{
                 SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
                 SpriteFont font = ScreenManager.Font;
+                string message;
 
-                string message = "Loading ... " + loadingTitle;
+                if(loadingTitle != "You Win!" && loadingTitle != "GAME OVER")
+                    message = "Loading ... " + loadingTitle;
+                else
+                    message = loadingTitle;
+
 
                 // Center the text in the viewport.
                 Viewport viewport = ScreenManager.GraphicsDevice.Viewport;
