@@ -10,7 +10,9 @@
 #region Using Statements
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 #endregion
 
 namespace GameStateManagement
@@ -53,7 +55,14 @@ namespace GameStateManagement
             this.loadingTitle = loadingTitle;
             this.screensToLoad = screensToLoad;
 
-            TransitionOnTime = TimeSpan.FromSeconds(0.5);
+            if (loadingTitle != "You Win!")
+                TransitionOnTime = TimeSpan.FromSeconds(0.5);
+            else if (loadingTitle == "You Win!")
+            {                  
+                TransitionOnTime = TimeSpan.FromSeconds(5.5);
+                TransitionOffTime = TimeSpan.FromSeconds(5.5);
+            }
+
         }
 
 
@@ -146,8 +155,10 @@ namespace GameStateManagement
                 SpriteFont font = ScreenManager.Font;
                 string message;
 
-                if(loadingTitle != "You Win!" && loadingTitle != "GAME OVER")
+                if (loadingTitle != "You Win!" && loadingTitle != "GAME OVER")
                     message = "Loading ... " + loadingTitle;
+                else if (loadingTitle == "You Win!")
+                    message = loadingTitle + "\nNo copyright infringment intended\nBy:\nJeremy Davis\nSam Dornan\nJoe Maclean\nMatt Parson";
                 else
                     message = loadingTitle;
 
@@ -171,3 +182,4 @@ namespace GameStateManagement
         #endregion
     }
 }
+

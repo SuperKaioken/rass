@@ -28,7 +28,7 @@ namespace GameStateManagement
         int maxEnemiesOnScreen;
         int killsNeeded;
         ContentManager content = GameplayScreen.Content;
-        public Boss boss = new Boss(GameplayScreen.Content);
+        public Boss boss;
 
         public EnemyGenerator()
         {
@@ -39,110 +39,112 @@ namespace GameStateManagement
         }
 
         public static void LoadContent(ContentManager Content)
-        {           
-#region //store the axe enemy
-            //store the axe enemy
-#endregion
-#region axeSprite = new Texture2D[4];
+        {
+            #region //store the axe enemy
             axeSprite = new Texture2D[4];
-#endregion
-#region for (int i = 0; i < 4; i++)
             for (int i = 0; i < 4; i++)
-#endregion
-#region {
             {
-#endregion
-#region axeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\axe" + i.ToString());
                axeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\axe" + i.ToString());
-#endregion
-#region }
             }
-#endregion
+            #endregion
 
-            //make the ball enemy
+            #region //make the ball enemy
             ballSprite = new Texture2D[4];
             for (int i = 0; i < 4; i++)
             {
                 ballSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\ball" + i.ToString());
-            }            
+            }
+            #endregion
 
-            //make the blue eye enemy
-             blueeyeSprite = new Texture2D[3];
-             for (int i = 0; i < 3; i++)
-             {
-                 blueeyeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\blueeye" + i.ToString());
-             }
+            #region //make the blue eye enemy
+            blueeyeSprite = new Texture2D[3];
+            for (int i = 0; i < 3; i++)
+            {
+             blueeyeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\blueeye" + i.ToString());
+            }
+            #endregion
 
-            //make the goldeye enemy
-             goldeyeSprite = new Texture2D[3];
-             for (int i = 0; i < 3; i++)
-             {
-                 goldeyeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\goldeye" + i.ToString());
-             }
+            #region //make the goldeye enemy
+            goldeyeSprite = new Texture2D[3];
+            for (int i = 0; i < 3; i++)
+            {
+                goldeyeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\goldeye" + i.ToString());
+            }
+            #endregion
 
-            //make the lance enemy
+            #region //make the lance enemy
             lanceSprite = new Texture2D[9];
             for (int i = 0; i < 9; i++)
             {
                 lanceSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\lance" + i.ToString());
             }
+            #endregion
 
-            //make the pulse enemy
-             pulseSprite = new Texture2D[4];
-             for (int i = 0; i < 4; i++)
-             {
-                 pulseSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\pulse" + i.ToString());
-             }
+            #region //make the pulse enemy
+            pulseSprite = new Texture2D[4];
+            for (int i = 0; i < 4; i++)
+            {
+                pulseSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\pulse" + i.ToString());
+            }
+            #endregion
 
-            //make the slime enemy
+            #region//make the slime enemy
             slimeSprite = new Texture2D[5];
             for (int i = 0; i < 5; i++)
             {
                 slimeSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\slime" + i.ToString());
             }
+            #endregion
 
-            //make the thing enemy
+            #region //make the thing enemy
             thingSprite = new Texture2D[6];
             for (int i = 0; i < 6; i++)
             {
                 thingSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\thing" + i.ToString());
             }
+            #endregion
 
-            //make the wolf enemy
+            #region //make the wolf enemy
             wolfSprite = new Texture2D[3];
             for (int i = 0; i < 3; i++)
             {
                 wolfSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\wolf" + i.ToString());
             }
+            #endregion
 
-            //make the rabbit enemy
+            #region//make the rabbit enemy
             rabbitSprite = new Texture2D[6];
             for (int i = 0; i < 6; i++)
             {
                 rabbitSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\rabbit" + i.ToString());
             }
+            #endregion
 
-            //make the boar enemy
+            #region//make the boar enemy
             boarSprite = new Texture2D[2];
             for (int i = 0; i < 2; i++)
             {
                 boarSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\boar" + i.ToString());
             }
+            #endregion
 
-            //make the spikey enemy
+            #region //make the spikey enemy
             spikeySprite = new Texture2D[1];
             spikeySprite[0] = Content.Load<Texture2D>("Sprites\\Enemies\\spikey");
+            #endregion
 
-            //make the ship enemy
+            #region //make the ship enemy
             shipSprite = new Texture2D[1];
             shipSprite[0] = Content.Load<Texture2D>("Sprites\\Enemies\\ship");
+            #endregion
 
-            //make the explosions
+            #region //make the explosions
             explosionSprite = new Texture2D[16];
             for (int i = 0; i < 16; i++)
             {
                 explosionSprite[i] = Content.Load<Texture2D>("Sprites\\Enemies\\explosion" + i.ToString());
             }
+            #endregion
         }
 
         public void Update()
@@ -272,13 +274,13 @@ namespace GameStateManagement
                                 enemies[enemies.Count() - 1].sound = null;
                                 break;
                             case 2:
-                                enemies.Add(new EnemyObject(thingSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(3, 3)));
+                                enemies.Add(new EnemyObject(thingSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(5, 5)));
                                 if (side != 0)
                                     enemies[enemies.Count() - 1].position.X -= enemies[enemies.Count() - 1].sprite[enemies[enemies.Count() - 1].spritePosition].Width;
                                 enemies[enemies.Count() - 1].sound = content.Load<SoundEffect>("Sounds\\Enemies\\alarm4");
                                 break;
                             case 3:
-                                enemies.Add(new EnemyObject(rabbitSprite, new Vector2(side, GameStateManagement.GameplayScreen.viewportRect.Height - 150), new Vector2(0.5f, 0)));
+                                enemies.Add(new EnemyObject(rabbitSprite, new Vector2(side, GameStateManagement.GameplayScreen.viewportRect.Height - 150), new Vector2(1, 0)));
                                 if (side != 0)
                                     enemies[enemies.Count() - 1].position.X -= enemies[enemies.Count() - 1].sprite[enemies[enemies.Count() - 1].spritePosition].Width;
                                 //enemies[enemies.Count() - 1].sound = content.Load<SoundEffect>("Sounds\\Enemies\\bubbles");
@@ -286,6 +288,8 @@ namespace GameStateManagement
                         }
                         break;
                     case level.boss:
+                        if (boss == null)
+                            boss = new Boss(GameplayScreen.Content);
                         boss.Update();
                         return;
                         break;

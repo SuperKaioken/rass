@@ -9,6 +9,7 @@
 
 #region Using Statements
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Media;
 #endregion
 
 namespace GameStateManagement
@@ -26,7 +27,7 @@ namespace GameStateManagement
         /// </summary>
         public MainMenuScreen()
             : base("")
-        {
+        {                        
                 // Create our menu entries.
                 MenuEntry playGameMenuEntry = new MenuEntry("Play Game");
                 MenuEntry optionsMenuEntry = new MenuEntry("Options");

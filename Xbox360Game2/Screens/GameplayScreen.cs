@@ -144,6 +144,8 @@ namespace GameStateManagement
         int superCount = 0;
         public static BallObject[] dudeBalls;
         public static SuperBallObject[] SuperdudeBalls;
+        Dirs fired = Dirs.STANDRIGHT;
+
         Texture2D healthBar;
         GamePadState previousGamePadState = GamePad.GetState(PlayerIndex.One);
         KeyboardState previousKeyboardState = Keyboard.GetState();
@@ -151,8 +153,9 @@ namespace GameStateManagement
         EnemyGenerator enemyGen;
 
         Song eEgg;
-        Song lastLevelIntro;
-        Song lastLevelSong;
+        Song secondLevelSong;
+        Song thirdLevelSong;
+        Song bossLevelSong;        
         SoundEffect gunShot;
         SoundEffect fireball;
         level currentLevel;
@@ -189,6 +192,7 @@ namespace GameStateManagement
         /// </summary>
         public override void LoadContent()
         {
+            SoundEffect.MasterVolume = .25f;
             if (Content == null)
                 Content = new ContentManager(ScreenManager.Game.Services, "Content");
 
@@ -200,30 +204,40 @@ namespace GameStateManagement
             spriteBatch = new SpriteBatch(ScreenManager.GraphicsDevice);
 
             eEgg = Content.Load<Song>("Sounds\\Some Cut");
-            lastLevelIntro = Content.Load<Song>("Sounds\\The Final Countdown");
-            lastLevelSong = Content.Load<Song>("Sounds\\through_the");
+            secondLevelSong = Content.Load<Song>("Sounds\\thunderkiss");
+            thirdLevelSong = Content.Load<Song>("Sounds\\The Final Countdown");
+            bossLevelSong = Content.Load<Song>("Sounds\\through_the");
             gunShot = Content.Load<SoundEffect>("Sounds\\Gun_Silencer");            
-            fireball = Content.Load<SoundEffect>("Sounds\\Fireball");
+            fireball = Content.Load<SoundEffect>("Sounds\\Fireball");            
 
             if (currentLevel == level.one)
             {
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back5");
-                killsNeeded = (int)level.one;
+                killsNeeded = (int)level.one;                
             }
             else if (currentLevel == level.two)
             {
+                MediaPlayer.Stop();
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back1");
                 killsNeeded = (int)level.two;
+                MediaPlayer.Volume = 1.0f;
+                MediaPlayer.Play(secondLevelSong);
             }
             else if (currentLevel == level.three)
             {
+                MediaPlayer.Stop();
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back2");
                 killsNeeded = (int)level.three;
+                MediaPlayer.Volume = 1.0f;
+                MediaPlayer.Play(thirdLevelSong);
             }
             else if (currentLevel == level.boss)
             {
+                MediaPlayer.Stop();
                 backgroundTexture = Content.Load<Texture2D>("Backgrounds\\back4");
                 killsNeeded = (int)level.boss;
+                MediaPlayer.Volume = 1.0f;
+                MediaPlayer.Play(bossLevelSong);
             }
 
             dude = new GameObject(Content.Load<Texture2D>("Sprites\\Contra\\Stand\\contra-stand0"));
@@ -275,11 +289,6 @@ namespace GameStateManagement
                 SuperdudeBalls[i].FireBallFrame[1] = Content.Load<Texture2D>("Sprites\\Weapons\\FireBallRightF2");
             }
 
-            //backgrounds = new Texture2D[5];
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    backgrounds[i] = Content.Load<Texture2D>("Backgrounds\\back" + (i+1).ToString());
-            //}
             viewportRect = new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, ScreenManager.GraphicsDevice.Viewport.Height);
 
             // once the load has finished, we use ResetElapsedTime to tell the game's
@@ -438,7 +447,7 @@ namespace GameStateManagement
                             }
                             #endregion
                             #region Right Trigger
-                            else if (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f)
+                            else if (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right < 0.25f)
                             {
                                 FireDudeBall();
                             }
@@ -450,17 +459,17 @@ namespace GameStateManagement
                                 Jump();
                             }
                             #endregion
-                            if (gamePadState.Triggers.Left > 0.5f && previousGamePadState.Triggers.Left > 0.5f)
-                            {
+                            #region Left Trigger
+                            if (gamePadState.Triggers.Left > 0.5f && previousGamePadState.Triggers.Left > 0.5f)                            
                                 superCount++;
-                            }
+                            #endregion
                         }
                         else
                         {
                             #region Move Right and Shoot
                             if (gamePadState.ThumbSticks.Left.X >= 0.25f &&
                                 (gamePadState.ThumbSticks.Left.Y >= -0.25f && gamePadState.ThumbSticks.Left.Y <= 0.25f) &&
-                                (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f))
+                                (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right < 0.25f))
                             {
                                 if (dude.dir != Dirs.RUNSHOOTRIGHT)
                                     dude.currentFrame = 0;
@@ -501,7 +510,7 @@ namespace GameStateManagement
                             #endregion                            
                             #region Move Upright (and shoot)
                             else if (gamePadState.ThumbSticks.Left.X >= 0.5f && gamePadState.ThumbSticks.Left.Y >= 0.5f &&
-                                (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f))
+                                (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right < 0.25f))
                             {
                                 if (dude.dir != Dirs.UPRIGHT)
                                     dude.currentFrame = 0;
@@ -560,13 +569,13 @@ namespace GameStateManagement
 
                                 dude.sprite = dude.spriteSheetUp[dude.currentFrame];
 
-                                if (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right <= 0.5f)
+                                if (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right <= 0.25f)
                                     FireDudeBall();
                             }
                             #endregion
                             #region Move Upleft (and shoot)
                             else if ((gamePadState.ThumbSticks.Left.X <= -0.5f && gamePadState.ThumbSticks.Left.Y >= 0.5f) &&
-                                    (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right <= 0.5f))
+                                    (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right <= 0.25f))
                             {
                                 if (dude.dir != Dirs.UPLEFT)
                                     dude.currentFrame = 0;
@@ -610,7 +619,7 @@ namespace GameStateManagement
                             #region Move Left and Shoot
                             else if ((gamePadState.ThumbSticks.Left.X <= -0.25f &&
                                     (gamePadState.ThumbSticks.Left.Y >= -0.25f && gamePadState.ThumbSticks.Left.Y <= 0.25f)) &&
-                                    (gamePadState.Triggers.Right >= 0.5f && previousGamePadState.Triggers.Right < 0.5f))
+                                    (gamePadState.Triggers.Right >= 0.25f && previousGamePadState.Triggers.Right < 0.25f))
                             {
                                 if (dude.dir != Dirs.RUNSHOOTLEFT)
                                     dude.currentFrame = 0;
@@ -701,12 +710,10 @@ namespace GameStateManagement
             {
                 if(currentLevel == level.one)
                 {
-                    //MediaPlayer.Play(lastLevelSong);
                     LoadingScreen.Load(ScreenManager, "Level 2", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.two));
                 }
                 else if(currentLevel == level.two)     
                 {
-                    //MediaPlayer.Stop();
                     LoadingScreen.Load(ScreenManager, "Level 3", ControllingPlayer.Value, new GameplayScreen(dude.health, dude.lives, level.three));
                 }                   
                 else if(currentLevel == level.three)
@@ -786,7 +793,7 @@ namespace GameStateManagement
             foreach (BallObject ball in dudeBalls)
             {
                 if (!ball.alive)
-                {
+                {                   
                     gunShot.Play();
                     ball.alive = true;
                     ball.position.Y = dude.position.Y - dude.sprite.Height / 2 - 12;
@@ -827,7 +834,7 @@ namespace GameStateManagement
                 }
             }
         }
-
+    
         public void SuperFireDudeBall()
         {
             foreach (SuperBallObject ball in SuperdudeBalls)
@@ -835,6 +842,7 @@ namespace GameStateManagement
                 if (!ball.alive)
                 {
                     ball.alive = true;
+                    fired = dude.dir;
                     ball.position.Y = dude.position.Y - dude.sprite.Height / 2 - 65;
                     if (dude.dir == Dirs.RUNSHOOTLEFT || dude.dir == Dirs.RUNLEFT || dude.dir == Dirs.STANDLEFT)
                     {
@@ -983,55 +991,65 @@ namespace GameStateManagement
 
             spriteBatch.Draw(backgroundTexture, viewportRect, Color.White);
 
+            #region Draw dude 
             if (dude.dir == Dirs.RUNLEFT || dude.dir == Dirs.UPLEFT || dude.dir == Dirs.RUNSHOOTLEFT || dude.dir == Dirs.STANDLEFT)            
                 spriteBatch.Draw(dude.sprite, dude.destRect, null, Color.White, 0.0f, Vector2.Zero, SpriteEffects.FlipHorizontally, 0.0f);               
             else if (dude.dir == Dirs.RUNRIGHT || dude.dir == Dirs.UPRIGHT || dude.dir == Dirs.UP || dude.dir == Dirs.RUNSHOOTRIGHT || dude.dir == Dirs.STANDRIGHT)
                 spriteBatch.Draw(dude.sprite, dude.destRect, null, Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
             else if (dude.dir == Dirs.JUMPUP || dude.dir == Dirs.JUMPDOWN)
                 spriteBatch.Draw(dude.sprite, dude.destRect, null, Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0.0f);
+            #endregion
 
+            #region Draw balls
             foreach (BallObject ball in dudeBalls)
             {
-                if (ball.alive)
-                {
+                if (ball.alive)                
                     spriteBatch.Draw(ball.sprite, ball.position, Color.White);
-                }
             }
+            #endregion
 
+            #region Draw superball
             foreach (SuperBallObject sball in SuperdudeBalls)
             {
                 if (sball.alive)
                 {
-                    if (dude.dir == Dirs.RUNLEFT|| dude.dir == Dirs.RUNSHOOTLEFT || dude.dir == Dirs.STANDLEFT)
+
+                    if (fired == Dirs.RUNLEFT || fired == Dirs.RUNSHOOTLEFT || fired == Dirs.STANDLEFT)
                         spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, 0.0f, Vector2.Zero, 1f, SpriteEffects.FlipHorizontally, 0.0f);
-                    else if (dude.dir == Dirs.RUNRIGHT || dude.dir == Dirs.RUNSHOOTRIGHT || dude.dir == Dirs.STANDRIGHT)
+                    else if (fired == Dirs.RUNRIGHT || fired == Dirs.RUNSHOOTRIGHT || fired == Dirs.STANDRIGHT)
                         spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, 0.0f, Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
-                    else if (dude.dir == Dirs.UP)
+                    else if (fired == Dirs.UP)
                         spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, MathHelper.ToRadians(-90.0f), Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
-                    else if (dude.dir == Dirs.UPRIGHT)
+                    else if (fired == Dirs.UPRIGHT)
                         spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, MathHelper.ToRadians(-45.0f), Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
-                    else if (dude.dir == Dirs.UPLEFT)
-                        spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, MathHelper.ToRadians(-135.0f), Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
+                    else if (fired == Dirs.UPLEFT)
+                        spriteBatch.Draw(sball.sprite, sball.position, null, Color.White, MathHelper.ToRadians(-135.0f), Vector2.Zero, 1f, SpriteEffects.None, 0.0f);                    
                 }
             }
+            #endregion
 
+            #region Draw enemies
             enemyGen.Draw(gameTime, spriteBatch);
-            enemyGen.boss.Draw(gameTime, spriteBatch);
+            if(enemyGen.boss != null)
+                enemyGen.boss.Draw(gameTime, spriteBatch);
+            #endregion
 
+            #region Draw Health Bar and lives
             //Draw the negative space for the health bar            
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
+            spriteBatch.Draw(healthBar, new Rectangle(40, 20, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the current health level based on the current Health
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (int)((healthBar.Width / 2) * ((double)dude.health / 100)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Green, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
+            spriteBatch.Draw(healthBar, new Rectangle(40, 20, (int)((healthBar.Width / 2) * ((double)dude.health / 100)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Green, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the box around the health bar
-            spriteBatch.Draw(healthBar, new Rectangle((ScreenManager.Game.Window.ClientBounds.Width / 2) - (healthBar.Width / 2) + 65, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
-            
-            spriteBatch.DrawString(outlineFont, "HEALTH", new Vector2(15, 0), Color.Red);
-            spriteBatch.DrawString(font, "HEALTH", new Vector2(15, 0), Color.White);
+            spriteBatch.Draw(healthBar, new Rectangle(40, 20, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
+
+            spriteBatch.DrawString(outlineFont, "HEALTH", new Vector2(viewportRect.Width / 2 - 60, 10), Color.Red);
+            spriteBatch.DrawString(font, "HEALTH", new Vector2(viewportRect.Width / 2 - 60, 10), Color.White);
 
             for (int i = 0; i < dude.lives; i++)
-                spriteBatch.Draw(Content.Load<Texture2D>("Sprites\\Contra\\lives"), new Rectangle((i * 30) + 400, 10, 25, 22), Color.White);
+                spriteBatch.Draw(Content.Load<Texture2D>("Sprites\\Contra\\lives"), new Rectangle((i * 30) + 40, 50, 25, 22), Color.White);
+            #endregion
 
             spriteBatch.End();
 

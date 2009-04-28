@@ -33,6 +33,8 @@ namespace GameStateManagement
         Texture2D healthBar;
         SpriteFont font;
         SpriteFont outlineFont;
+        Vector2 previousVelocity;
+        public int deathTimer;
 
         public Boss(ContentManager content)
         {
@@ -45,6 +47,7 @@ namespace GameStateManagement
             alive = true;
             position = new Vector2(GameStateManagement.GameplayScreen.viewportRect.Width / 2, GameStateManagement.GameplayScreen.viewportRect.Height - 275);
             velocity = Vector2.Zero;
+            previousVelocity = new Vector2(-1, 0);
             health = 200;
         }
 
@@ -69,10 +72,16 @@ namespace GameStateManagement
             hitSheet = new Texture2D[1];
             hitSheet[0] = Content.Load<Texture2D>("Sprites\\Boss\\bosshit");
 
-            deathSheet = new Texture2D[3];
+            deathSheet = new Texture2D[9];
             deathSheet[0] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie0");
-            deathSheet[1] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie1");
-            deathSheet[2] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie2");
+            deathSheet[1] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie0");
+            deathSheet[2] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie0");
+            deathSheet[3] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie1");
+            deathSheet[4] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie1");
+            deathSheet[5] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie1");
+            deathSheet[6] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie2");
+            deathSheet[7] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie2");
+            deathSheet[8] = Content.Load<Texture2D>("Sprites\\Boss\\bossdie2");
 
         }
 
@@ -85,6 +94,8 @@ namespace GameStateManagement
             {
                 case state.STAND:
                     currentSheet = standSheet;
+                    if (previousState != state.STAND)
+                        previousVelocity = velocity;
                     velocity.X = 0;
                     if (AITimer == 20)
                     {
@@ -93,38 +104,44 @@ namespace GameStateManagement
                     }
                     break;
                 case state.WALK:
+                    if (previousState == state.ATTACK)
+                        currentSprite = 0;
                     currentSheet = walkSheet;
                     if (GameStateManagement.GameplayScreen.dude.destRect.X < this.position.X + this.currentSheet[currentSprite].Width / 2)
                         velocity.X = -1;
                     else
                         velocity.X = 1;
-                    if (Math.Abs(this.position.X + this.currentSheet[currentSprite].Width / 3 - GameStateManagement.GameplayScreen.dude.destRect.X) < 150.0f)
+                    if (Math.Abs(this.position.X + this.currentSheet[currentSprite].Width / 3 - GameStateManagement.GameplayScreen.dude.destRect.X) < 100.0f)
                     {
                         nextState = state.ATTACK;
                     }
                     break;
                 case state.ATTACK:
                     currentSheet = attackSheet;
-                    if (Math.Abs(this.position.X + this.currentSheet[currentSprite].Width / 3 - GameStateManagement.GameplayScreen.dude.destRect.X) > 150.0f)
+                    if (previousState != state.ATTACK)
+                        previousVelocity = velocity;
+                    velocity.X = 0;
+                    nextState = state.ATTACK;
+                    if (Math.Abs(this.position.X + this.currentSheet[currentSprite].Width / 3 - GameStateManagement.GameplayScreen.dude.destRect.X) > 100.0f && currentSprite == 0)
                     {
                         nextState = state.WALK;
                     }
-                    else
-                        nextState = state.ATTACK;
-                    velocity.X = 0;
                     break;
                 case state.HIT:
                     currentSheet = hitSheet;
                     nextState = previousState;
-                    if (health == 0)
+                    velocity.X = 0;
+                    if (health <= 0)
                     {
                         nextState = state.DEATH;
                     }
                     break;
                 case state.DEATH:
                     currentSheet = deathSheet;
-                    velocity.X = 0;
                     nextState = state.DEATH;
+                    if (previousState != state.DEATH)
+                        previousVelocity = velocity;
+                    velocity.X = 0;
                     break;
                 default:
                     break;
@@ -138,13 +155,13 @@ namespace GameStateManagement
 
         public void Update()
         {
-            AI();
             checkCollision();
+            AI();
             position += velocity;
             timePassed++;
             if (!this.dying)
             {
-                if (timePassed > 25)
+                if (timePassed > 15)
                 {
                     currentSprite++;
                     if (currentSprite > currentSheet.Length - 1)
@@ -161,25 +178,28 @@ namespace GameStateManagement
         public void checkCollision()
         {
             if (this.alive)
-                this.rect = new Rectangle((int)this.position.X + this.currentSheet[currentSprite].Width / 3, (int)this.position.Y + this.currentSheet[currentSprite].Height / 2, 419, 300);
+                this.rect = new Rectangle((int)this.position.X + this.currentSheet[currentSprite].Width / 3, (int)this.position.Y + this.currentSheet[currentSprite].Height / 2, 200, 200);
             else
                 this.rect = new Rectangle();
 
             foreach (BallObject ball in GameStateManagement.GameplayScreen.dudeBalls)
             {
+
                 if (ball.alive)
                 {
                     ball.rect = new Rectangle((int)ball.position.X, (int)ball.position.Y, ball.rect.Width, ball.rect.Height);
                     if (ball.rect.Intersects(this.rect))
                     {
                         if (health > 0)
+                        {
                             this.health -= 2;
+                        }
                         else
                         {
                             this.alive = false;
                             this.dying = true;
-                            currentSheet = deathSheet;
-                            currentState = state.DEATH;
+                            nextState = state.DEATH;
+                            currentSprite = 0;
                         }
 
                         ball.alive = false;
@@ -196,13 +216,20 @@ namespace GameStateManagement
                     if (sball.rect.Intersects(this.rect))
                     {
                         if (health > 0)
+                        {
                             this.health -= 2;
+                            currentState = state.WALK;
+                            nextState = state.HIT;
+                            if (velocity.X != 0)
+                                previousVelocity = velocity;
+                            currentSprite = 0;
+                        }
                         else
                         {
                             this.alive = false;
                             this.dying = true;
-                            currentSheet = deathSheet;
-                            currentState = state.DEATH;
+                            nextState = state.DEATH;
+                            currentSprite = 0;
                         }
                     }
                     return;
@@ -211,27 +238,24 @@ namespace GameStateManagement
 
             if (this.rect.Intersects(GameplayScreen.dude.destRect))
             {
-                GameplayScreen.dude.health -= 5;
-                if (health > 0)
-                    this.health -= 2;
-                else
+                if (this.currentState == state.ATTACK && currentSprite == 4)
                 {
-                    this.alive = false;
-                    this.dying = true;
-                    currentSheet = deathSheet;
-                    currentState = state.DEATH;
+                    GameplayScreen.dude.health -= 2;
                 }
             }
         }
 
         public void die()
         {
-            if (timePassed > 25)
+            if (timePassed > 15)
             {
                 currentSprite++;
                 if (currentSprite > currentSheet.Length - 1)
                 {
-                    this.dying = false;
+                    deathTimer++;
+                    currentSprite = currentSheet.Length - 1;
+                    if (deathTimer > 50)
+                        GameStateManagement.GameplayScreen.killsNeeded = 0;
                 }               
             }
         }
@@ -240,23 +264,24 @@ namespace GameStateManagement
         {
             if (this.alive || this.dying)
             {
-                if (velocity.X <= 0)
+                Vector2 checkVelocity = velocity;
+                if (checkVelocity.X == 0)
+                    checkVelocity = previousVelocity;
+
+                if (checkVelocity.X <= 0)
                     spriteBatch.Draw(currentSheet[currentSprite], position, Color.White);
-                else if (velocity.X > 0)
-                    spriteBatch.Draw(currentSheet[currentSprite], position, null, Color.White, 0.0f, Vector2.Zero, 1f, SpriteEffects.FlipHorizontally, 0.0f);
+                else if (checkVelocity.X > 0)
+                    spriteBatch.Draw(currentSheet[currentSprite], new Vector2(position.X-25, position.Y), null, Color.White, 0.0f, Vector2.Zero, 1f, SpriteEffects.FlipHorizontally, 0.0f);
             }
 
             //Draw the negative space for the health bar            
-            spriteBatch.Draw(healthBar, new Rectangle((GameStateManagement.GameplayScreen.viewportRect.Width / 2) - (healthBar.Width / 2) + 300, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
+            spriteBatch.Draw(healthBar, new Rectangle(GameStateManagement.GameplayScreen.viewportRect.Width - (healthBar.Width / 2) - 40, 20, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Black, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the current health level based on the current Health
-            spriteBatch.Draw(healthBar, new Rectangle((GameStateManagement.GameplayScreen.viewportRect.Width / 2) - (healthBar.Width / 2) + 300, 10, (int)((healthBar.Width / 2) * ((double)this.health / 200)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Red, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
+            spriteBatch.Draw(healthBar, new Rectangle(GameStateManagement.GameplayScreen.viewportRect.Width - (healthBar.Width / 2) - 40, 20, (int)((healthBar.Width / 2) * ((double)this.health / 200)), 20), new Rectangle(0, 45, healthBar.Width / 2, 30), Color.Red, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
 
             //Draw the box around the health bar
-            spriteBatch.Draw(healthBar, new Rectangle((GameStateManagement.GameplayScreen.viewportRect.Width / 2) - (healthBar.Width / 2) + 300, 10, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
-
-            spriteBatch.DrawString(outlineFont, "BOSS HEALTH", new Vector2(15, GameStateManagement.GameplayScreen.viewportRect.Width), Color.Red);
-            spriteBatch.DrawString(font, "BOSS HEALTH", new Vector2(15, GameStateManagement.GameplayScreen.viewportRect.Width), Color.White);
+            spriteBatch.Draw(healthBar, new Rectangle(GameStateManagement.GameplayScreen.viewportRect.Width - (healthBar.Width / 2) - 40, 20, (healthBar.Width / 2) + 5, 25), new Rectangle(0, 0, (healthBar.Width / 2) + 5, 25), Color.White, 0.0f, Vector2.Zero, SpriteEffects.None, 0);
         }
     }
 }

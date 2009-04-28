@@ -12,6 +12,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 #endregion
 
 namespace GameStateManagement
@@ -27,6 +28,7 @@ namespace GameStateManagement
 
         ContentManager content;
         Texture2D backgroundTexture;
+        Song introSong;
 
         #endregion
 
@@ -56,6 +58,8 @@ namespace GameStateManagement
                 content = new ContentManager(ScreenManager.Game.Services, "Content");
 
             backgroundTexture = content.Load<Texture2D>("Backgrounds\\titleShotBack");
+            introSong = content.Load<Song>("Sounds\\dragula2");
+            MediaPlayer.Play(introSong);
         }
 
 
