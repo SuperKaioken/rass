@@ -16,18 +16,19 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace GameStateManagement
 {
-    public enum level { one = 50, two = 75, three = 100, four = 150 };    
+    public enum level { one = 50, two = 75, three = 100, boss };    
     
     public class EnemyGenerator
     {
-        List<EnemyObject> enemies;
+        List<EnemyObject> enemies;        
         public static Texture2D[] axeSprite, ballSprite, lanceSprite, thingSprite, spikeySprite, shipSprite, pulseSprite, slimeSprite, blueeyeSprite, goldeyeSprite;
         public static Texture2D[] wolfSprite, rabbitSprite, boarSprite;
         public static Texture2D[] explosionSprite;
         Random random;
         int maxEnemiesOnScreen;
         int killsNeeded;
-        ContentManager content = GameplayScreen.Content;        
+        ContentManager content = GameplayScreen.Content;
+        public Boss boss = new Boss(GameplayScreen.Content);
 
         public EnemyGenerator()
         {
@@ -201,7 +202,7 @@ namespace GameStateManagement
                                 enemies[enemies.Count() - 1].sound = content.Load<SoundEffect>("Sounds\\Enemies\\whoosh2");
                                 break;
                             case 1:
-                                enemies.Add(new EnemyObject(ballSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(4, 0)));
+                                enemies.Add(new EnemyObject(ballSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(4, 4)));
                                 if (side != 0)
                                     enemies[enemies.Count() - 1].position.X -= enemies[enemies.Count() - 1].sprite[enemies[enemies.Count() - 1].spritePosition].Width;
                                 enemies[enemies.Count() - 1].sound = content.Load<SoundEffect>("Sounds\\Enemies\\R2D2");
@@ -242,7 +243,7 @@ namespace GameStateManagement
                                 enemies[enemies.Count() - 1].sound = null;
                                 break;
                             case 3:
-                                enemies.Add(new EnemyObject(spikeySprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(4, 0)));
+                                enemies.Add(new EnemyObject(spikeySprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(4, 4)));
                                 if (side != 0)
                                     enemies[enemies.Count() - 1].position.X -= enemies[enemies.Count() - 1].sprite[enemies[enemies.Count() - 1].spritePosition].Width;
                                 enemies[enemies.Count() - 1].sound = null;
@@ -271,7 +272,7 @@ namespace GameStateManagement
                                 enemies[enemies.Count() - 1].sound = null;
                                 break;
                             case 2:
-                                enemies.Add(new EnemyObject(thingSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(3, 0)));
+                                enemies.Add(new EnemyObject(thingSprite, new Vector2(side, (GameStateManagement.GameplayScreen.viewportRect.Height - 200) * MathHelper.Clamp((float)random.NextDouble(), 0, GameStateManagement.GameplayScreen.viewportRect.Height - 150)), new Vector2(3, 3)));
                                 if (side != 0)
                                     enemies[enemies.Count() - 1].position.X -= enemies[enemies.Count() - 1].sprite[enemies[enemies.Count() - 1].spritePosition].Width;
                                 enemies[enemies.Count() - 1].sound = content.Load<SoundEffect>("Sounds\\Enemies\\alarm4");
@@ -284,7 +285,10 @@ namespace GameStateManagement
                                 break;
                         }
                         break;
-
+                    case level.boss:
+                        boss.Update();
+                        return;
+                        break;
                 }
             }
         }

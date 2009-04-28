@@ -44,7 +44,12 @@ namespace GameStateManagement
             numEnemies = OptionsMenuScreen.getEnemies();
             random = new Random();
 
-            
+            if (OptionsMenuScreen.currentDifficulty == 0)
+                velocity *= 1;
+            else if (OptionsMenuScreen.currentDifficulty == 1)
+                velocity *= 1.25f;
+            else
+                velocity *= 1.5f;
             //velocity.X = 100;
             //if (numEnemies == 0)
             //    velocity.X = 1;
@@ -59,7 +64,11 @@ namespace GameStateManagement
         {
             checkCollision();
             //if it's the axe enemy, do this (need some way to check what enemy it is)
-            axeMovement();
+            if (velocity.Y > 0)
+                hommingMovement();
+            else
+                axeMovement();
+
             timePassed++;
             if (timePassed > 25)
             {
@@ -160,6 +169,43 @@ namespace GameStateManagement
             position.X += velocity.X;
             position.Y += (float)random.NextDouble() * 2.0f;
             position.Y -= (float)random.NextDouble() * 2.0f;
+        }
+
+        public void hommingMovement()
+        {
+            Vector2 slope = new Vector2(GameplayScreen.dude.destRect.X - position.X, GameplayScreen.dude.destRect.Y - position.Y);
+            slope.Normalize();
+
+            //if (position.X == GameplayScreen.dude.destRect.X)
+            //{
+            //    position.Y += velocity.Y;
+            //}
+            //else if (position.Y == GameplayScreen.dude.destRect.Y)
+            //{
+            //    position.X -= (position.X - GameplayScreen.dude.destRect.X);
+            //}
+            //else if (position.X < GameplayScreen.dude.destRect.X && position.Y < GameplayScreen.dude.destRect.Y)
+            //{
+            //    position.X += slope;
+            //    position.Y += slope;
+            //}
+            //else if (position.X > GameplayScreen.dude.destRect.X && position.Y < GameplayScreen.dude.destRect.Y)
+            //{
+            //    position.X += slope;
+            //    position.Y -= slope;
+            //}
+            //else if (position.X < GameplayScreen.dude.destRect.X && position.Y > GameplayScreen.dude.destRect.Y)
+            //{
+            //    position.X -= slope;
+            //    position.Y += slope;
+            //}
+            //else if (position.X > GameplayScreen.dude.destRect.X && position.Y > GameplayScreen.dude.destRect.Y)
+            //{
+            //    position.X -= slope;
+            //    position.Y -= slope;
+            //}
+            position.X += slope.X * velocity.X;
+            position.Y += slope.Y * velocity.Y;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
